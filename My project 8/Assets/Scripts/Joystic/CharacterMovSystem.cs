@@ -1,0 +1,37 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+using Unity.Entities;
+
+public class CharacterMovSystem : ComponentSystem
+{
+    private EntityQuery _moveQuery;
+    private EntityQuery _runQuery;
+
+    protected override void OnCreate()
+    {
+        _moveQuery = GetEntityQuery(ComponentType.ReadOnly<InputData>(), ComponentType.ReadOnly<MoveData>(), ComponentType.ReadOnly<Transform>()); // move
+        // (nshan ***** MoveData() )
+        _runQuery = GetEntityQuery(ComponentType.ReadOnly<InputData>(), ComponentType.ReadOnly<MoveData>()); // run
+
+        
+    }
+    protected override void OnUpdate()
+    {
+        Entities.With(_moveQuery).ForEach((Entity entity, Transform transform, ref InputData inputData, ref MoveData move) => // move
+        { 
+            var pos = transform?.position;
+            pos += new Vector3(inputData.Move.x * move.Speed, y:0, inputData.Move.y * move.Speed);
+            transform.position = (Vector3)pos;
+        });
+        Entities.With(_runQuery).ForEach((Entity entity, ref MoveData move) => // run
+        {  
+            //move.Speed += 10; 
+         
+        });
+
+        
+
+    }
+
+    
+}
