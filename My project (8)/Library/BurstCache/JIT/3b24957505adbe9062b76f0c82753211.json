@@ -1,0 +1,8 @@
+{
+  "ExternalFunctions": [
+    {
+      "Name": "Unity.Burst.LowLevel.BurstCompilerService::GetOrCreateSharedMemory",
+      "FullName": "Unity.Burst.LowLevel.BurstCompilerService.GetOrCreateSharedMemory(ref UnityEngine.Hash128 key, uint size_of, uint alignment) -> void*_21c91f9d72f11d5e327684c232d9250e"
+    }
+  ]
+}
