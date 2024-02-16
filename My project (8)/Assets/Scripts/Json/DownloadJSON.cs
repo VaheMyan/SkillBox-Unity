@@ -29,7 +29,7 @@ public class DownloadJSON : MonoBehaviour
             string json = File.ReadAllText(filePath);
             PlayerStats loadedPlayerStats = JsonUtility.FromJson<PlayerStats>(json);
 
-            Debug.Log("Json: " + json);
+            Debug.Log("Json: " + loadedPlayerStats);
 
         }
         else

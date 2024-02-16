@@ -39,6 +39,7 @@ public class ShootAbility : MonoBehaviour, IAbility
             var newBullet = Instantiate(bullent, t.position, t.rotation);
             stats++;
             downloadJSON.playerStats.ShootCout = stats;
+            Debug.Log("aaaaaaaaaaaaaaaaaaa" + downloadJSON.playerStats.ShootCout);
 
         }
         else
