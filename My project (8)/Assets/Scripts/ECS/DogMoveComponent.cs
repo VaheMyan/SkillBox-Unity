@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class DogMoveComponent : MonoBehaviour
 {
-    public float _moveSpeed = 1;
+    public float _moveSpeed = 1f;
 }

@@ -5,7 +5,12 @@ using static BehaviourManager;
 
 public class AIEvaluateSystem : ComponentSystem
 {
-    // sa ancnum e bolor Entity-neri vrayov, voronq unen component AIAgent voronq el irenc hertin ancnum en bolor Behaviour-ner irakanacnelov irenc "Evaluate()"-y, ev stanalov ardyunq, yntrum e ayn vor veradarcrel e amenic shaty, ev dran dnum e inchpes aktiv поведения
+    // sa ancnum e bolor Entity-neri vrayov,
+    // voronq unen component AIAgent voronq el irenc hertin,
+    // ancnum en bolor Behaviour-ner irakanacnelov irenc "Evaluate()"-y,
+    // ev stanalov ardyunq,
+    // yntrum e ayn vor veradarcrel e amenic shaty,
+    // ev dran dnum e inchpes aktiv поведения
 
     private EntityQuery _evaluteQuery;
 
@@ -15,7 +20,7 @@ public class AIEvaluateSystem : ComponentSystem
     }
     protected override void OnUpdate()
     {
-        Entities.With(_evaluteQuery).ForEach((Entity entity, BehaviourManager manager) => // move
+        Entities.With(_evaluteQuery).ForEach((Entity entity, BehaviourManager manager) =>
         {
             float hightScore = float.MinValue;
 

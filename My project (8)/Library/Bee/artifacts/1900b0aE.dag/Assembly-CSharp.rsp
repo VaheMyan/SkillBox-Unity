@@ -400,6 +400,7 @@
 -analyzer:"Library/PackageCache/com.unity.entities@0.51.1-preview.21/Unity.Entities/SourceGenerators/Unity.Entities.SourceGen.Sample.dll"
 -analyzer:"Library/PackageCache/com.unity.entities@0.51.1-preview.21/Unity.Entities/SourceGenerators/Unity.Entities.SourceGen.SystemGenerator.dll"
 "Assets/Scripts/AI/BehaviourManager.cs"
+"Assets/Scripts/AI/Behaviours/MoveAgentBehaviour.cs"
 "Assets/Scripts/AI/Behaviours/RotateBehaviour.cs"
 "Assets/Scripts/AI/Behaviours/WaitBehaviour.cs"
 "Assets/Scripts/AI/Interface/IBehaviour.cs"
