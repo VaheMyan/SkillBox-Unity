@@ -118,6 +118,11 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll"
+-r:"Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll"
+-r:"Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll"
+-r:"Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll"
+-r:"Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
@@ -393,6 +398,10 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.CacheServer.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Zenject-Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Zenject-PoolMonitor-Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Zenject-ReflectionBaking-Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Zenject.ref.dll"
 -analyzer:"Library/PackageCache/com.unity.entities@0.51.1-preview.21/Unity.Entities/SourceGenerators/Unity.Entities.SourceGen.AuthoringComponent.dll"
 -analyzer:"Library/PackageCache/com.unity.entities@0.51.1-preview.21/Unity.Entities/SourceGenerators/Unity.Entities.SourceGen.Common.dll"
 -analyzer:"Library/PackageCache/com.unity.entities@0.51.1-preview.21/Unity.Entities/SourceGenerators/Unity.Entities.SourceGen.JobEntity.dll"
@@ -417,6 +426,8 @@
 "Assets/Scripts/Collision/TrapAbility.cs"
 "Assets/Scripts/Collision/Utils.cs"
 "Assets/Scripts/Collision/АpplyPromotion.cs"
+"Assets/Scripts/DI/injectionTest.cs"
+"Assets/Scripts/DI/MyInstaller.cs"
 "Assets/Scripts/ECS/DogMoveComponent.cs"
 "Assets/Scripts/ECS/DogMoveSystem.cs"
 "Assets/Scripts/Joystic/CharacterMovSystem.cs"

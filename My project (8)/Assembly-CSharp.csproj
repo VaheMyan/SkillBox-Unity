@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Joystic\UserInputData.cs" />
     <Compile Include="Assets\Scripts\Collision\CollisionSystem.cs" />
     <Compile Include="Assets\Scripts\Collision\АpplyPromotion.cs" />
+    <Compile Include="Assets\Scripts\AI\Behaviours\MoveAgentBehaviour.cs" />
     <Compile Include="Assets\Scripts\Collision\ApplyShoot.cs" />
     <Compile Include="Assets\Scripts\Joystic\ShootAbility.cs" />
     <Compile Include="Assets\Scripts\AI\BehaviourManager.cs" />
@@ -95,7 +96,8 @@
     <Compile Include="Assets\Scripts\ECS\DogMoveComponent.cs" />
     <Compile Include="Assets\Scripts\Collision\Utils.cs" />
     <Compile Include="Assets\Scripts\Collision\CharacterHealth.cs" />
-    <Compile Include="Assets\Scripts\AI\Behaviours\MoveAgentBehaviour.cs" />
+    <Compile Include="Assets\Scripts\DI\MyInstaller.cs" />
+    <Compile Include="Assets\Scripts\DI\injectionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SimpleTouchController\README.txt" />
@@ -376,6 +378,21 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -928,6 +945,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Zenject-Editor.csproj">
+      <Project>{BB58BDB9-0118-34AC-159F-C20B892CD064}</Project>
+      <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
+      <Project>{19EE3B5B-319D-679D-1768-F3EFCCBD242F}</Project>
+      <Name>Zenject-PoolMonitor-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
+      <Project>{C3A8897C-440E-7B13-7886-C2CB63C1E842}</Project>
+      <Name>Zenject-ReflectionBaking-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject.csproj">
+      <Project>{9049823F-0501-2C73-EC4B-795393D3EA01}</Project>
+      <Name>Zenject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
