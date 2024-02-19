@@ -2910,6 +2910,10 @@ PrefabInstance:
       value: Enamy
       objectReference: {fileID: 0}
     - target: {fileID: 7926046042617591771, guid: 56457a130ac56844b84413acfd8774c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926046042617591771, guid: 56457a130ac56844b84413acfd8774c5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -2927,6 +2931,7 @@ GameObject:
   - component: {fileID: 2025578529}
   - component: {fileID: 2025578528}
   - component: {fileID: 2025578531}
+  - component: {fileID: 2025578532}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -2946,6 +2951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40187d486e15a774c976508432893453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useScriptableObjectData: 0
 --- !u!114 &2025578529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3003,6 +3009,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 434ceae8e6846b44880ae926b51f3ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2025578532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025578527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2fb503a05e4a64ba8c9cf122ffb2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2034733564
