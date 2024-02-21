@@ -4,26 +4,13 @@ using Zenject;
 public class MyInstaller : MonoInstaller
 {
     [SerializeField] private bool useScriptableObjectData = true;
-    DummyDataProvider dummyDataProvider;
-    PlayerDataLoader playerDataLoader;
 
     public override void InstallBindings()
     {
-        if (useScriptableObjectData == true)
-        {
-            playerDataLoader.LoadData();
+        Container.Bind<Data>().FromResources("PlayerData").AsSingle();
+        Container.Bind<PlayerDataLoader>().AsSingle();
 
-            Container.Bind<Data>().FromResources("PlayerData").AsSingle();
-            Container.Bind<PlayerDataLoader>().AsSingle();
-            //Container.Bind<IDataProvider>().To<PlayerDataLoader>().AsSingle();
-        }
-        else
-        {
-            dummyDataProvider.LoadData();
-            Container.Bind<DummyDataProvider>().AsSingle();
-            //Container.Bind<DummyDataProvider>().AsSingle();
-            //Container.Bind<IDataProvider>().To<DummyDataProvider>().AsSingle();
-        }
+        Container.Bind<DummyDataProvider>().AsSingle();
 
         //Container.Bind<string>().FromInstance("INJECT");
         //Container.Bind<GreetMe>().AsSingle().NonLazy();

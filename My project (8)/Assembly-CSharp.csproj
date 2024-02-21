@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Joystic\CharacterMovSystem.cs" />
     <Compile Include="Assets\Scripts\Joystic\UserInputData.cs" />
     <Compile Include="Assets\Scripts\Collision\CollisionSystem.cs" />
+    <Compile Include="Assets\Scripts\DI\IDataProvider.cs" />
     <Compile Include="Assets\Scripts\Collision\АpplyPromotion.cs" />
     <Compile Include="Assets\Scripts\AI\Behaviours\MoveAgentBehaviour.cs" />
     <Compile Include="Assets\Scripts\Collision\ApplyShoot.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\Scripts\Collision\ApplyProjectile.cs" />
     <Compile Include="Assets\Scripts\AI\Systems\AIBehaviourSystem.cs" />
     <Compile Include="Assets\Scripts\AI\Behaviours\RotateBehaviour.cs" />
+    <Compile Include="Assets\Scripts\DI\Manager.cs" />
     <Compile Include="Assets\Scripts\Json\GoogleDriveTools.cs" />
     <Compile Include="Assets\Scripts\Collision\ApplyTag.cs" />
     <Compile Include="Assets\Scripts\Joystic\Interfaces\IAbility.cs" />
@@ -98,8 +100,6 @@
     <Compile Include="Assets\Scripts\ECS\DogMoveComponent.cs" />
     <Compile Include="Assets\Scripts\Collision\Utils.cs" />
     <Compile Include="Assets\Scripts\Collision\CharacterHealth.cs" />
-    <Compile Include="Assets\Scripts\DI\Manager.cs" />
-    <Compile Include="Assets\Scripts\DI\IDataProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SimpleTouchController\README.txt" />

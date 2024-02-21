@@ -11,6 +11,7 @@ public class Data : ScriptableObject
 public class PlayerDataLoader : IDataProvider
 {
     private Data data;
+
     public PlayerDataLoader(Data data)
     {
         this.data = data;
@@ -49,6 +50,7 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
-
+        playerDataLoader.LoadData();
+        dummyDataProvider.LoadData();
     }
 }
