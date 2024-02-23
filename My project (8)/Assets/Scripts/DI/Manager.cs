@@ -38,19 +38,5 @@ public class DummyDataProvider : IDataProvider
 
 public class Manager : MonoBehaviour
 {
-    private PlayerDataLoader playerDataLoader;
-    private DummyDataProvider dummyDataProvider;
 
-    [Inject]
-    public void Construct(PlayerDataLoader playerDataLoader, DummyDataProvider dummyDataProvider)
-    {
-        this.playerDataLoader = playerDataLoader;
-        this.dummyDataProvider = dummyDataProvider;
-    }
-
-    private void Start()
-    {
-        playerDataLoader.LoadData();
-        dummyDataProvider.LoadData();
-    }
 }

@@ -5,12 +5,29 @@ public class MyInstaller : MonoInstaller
 {
     [SerializeField] private bool useScriptableObjectData = true;
 
+    private PlayerDataLoader playerDataLoader;
+    private DummyDataProvider dummyDataProvider;
+
     public override void InstallBindings()
     {
-        Container.Bind<Data>().FromResources("PlayerData").AsSingle();
-        Container.Bind<PlayerDataLoader>().AsSingle();
+        if (useScriptableObjectData)
+        {
+            var data = new Data();
+            data._health = 100;
+            data._shootCout = 50;
 
-        Container.Bind<DummyDataProvider>().AsSingle();
+            playerDataLoader = new PlayerDataLoader(data);
+            playerDataLoader.LoadData();
+
+            Container.Bind<Data>().FromInstance(data).AsSingle();
+            Container.Bind<PlayerDataLoader>().FromInstance(playerDataLoader).AsSingle();
+        }
+        else
+        {
+            dummyDataProvider = new DummyDataProvider();
+            dummyDataProvider.LoadData();
+            Container.Bind<DummyDataProvider>().AsSingle();
+        }
 
         //Container.Bind<string>().FromInstance("INJECT");
         //Container.Bind<GreetMe>().AsSingle().NonLazy();
