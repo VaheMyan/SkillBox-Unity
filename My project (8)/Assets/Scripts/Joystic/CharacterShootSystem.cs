@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Unity.Entities;
 
@@ -13,16 +11,15 @@ public class CharacterShootSystem : ComponentSystem
     }
     protected override void OnUpdate()
     {
-        Entities.With(_shootQuery).ForEach((Entity entity, UserInputData inputData, ref InputData input) => 
-        { 
-            if(input.Shoot > 0f && inputData.ShootAction != null && inputData.ShootAction is IAbility ability)
+        Entities.With(_shootQuery).ForEach((Entity entity, UserInputData inputData, ref InputData input) =>
+        {
+            if (input.Shoot > 0f && inputData.ShootAction != null && inputData.ShootAction is IAbility ability)
             {
                 ability.Execute();
             }
 
         });
-        
     }
 
-    
+
 }

@@ -19,7 +19,7 @@ public class CollisionAbility : MonoBehaviour, IConvertGameObjectToEntity, IAbil
     {
         foreach (var action in collisionActions)
         {
-            if(action is IAbilityTarget ability) // ete action-y lracvats a =>
+            if (action is IAbilityTarget ability) // ete action-y lracvats a =>
             {
                 collisionActionsAbilities.Add(ability);
             }
@@ -32,12 +32,12 @@ public class CollisionAbility : MonoBehaviour, IConvertGameObjectToEntity, IAbil
 
     public void Execute()
     {
-        foreach(var action in collisionActionsAbilities)
+        foreach (var action in collisionActionsAbilities)
         {
             action.Targets = new List<GameObject>();
             collisions.ForEach(c =>
             {
-                if(c != null)action.Targets.Add(c.gameObject); // avelacnum enq Target-neri canki gameObject-neri vra
+                if (c != null) action.Targets.Add(c.gameObject); // avelacnum enq Target-neri canki gameObject-neri vra
             });
             action.Execute();
         }
@@ -46,7 +46,7 @@ public class CollisionAbility : MonoBehaviour, IConvertGameObjectToEntity, IAbil
     public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
     {
         float3 position = gameObject.transform.position;
-        switch(Collider)
+        switch (Collider)
         {
             case SphereCollider sphere:
                 sphere.ToWorldSpaceSphere(out var sphereCenter, out var sphereRadius);
@@ -84,7 +84,7 @@ public class CollisionAbility : MonoBehaviour, IConvertGameObjectToEntity, IAbil
         Collider.enabled = false;
     }
 
-    
+
 }
 
 public struct ActorColliderData : IComponentData

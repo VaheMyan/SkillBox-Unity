@@ -62,17 +62,22 @@
     <Analyzer Include="C:\Users\User\Documents\GitHub\SkillBox-Unity\My project (8)\Library\PackageCache\com.unity.entities@0.51.1-preview.21\Unity.Entities\SourceGenerators\Unity.Entities.SourceGen.AuthoringComponent.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Samples\Universal RP\12.1.9\URP Package Samples\CameraStacking\3D Skybox\Scripts\SkyboxCamera.cs" />
     <Compile Include="Assets\Scripts\Collision\ApplyDamage.cs" />
+    <Compile Include="Assets\Samples\Universal RP\12.1.9\URP Package Samples\SharedAssets\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\SimpleTouchController\Scripts\InfoTouches.cs" />
+    <Compile Include="Assets\Samples\Universal RP\12.1.9\URP Package Samples\SharedAssets\Scripts\AutoLoadPipelineAsset.cs" />
     <Compile Include="Assets\Scripts\Joystic\CharacterMovSystem.cs" />
     <Compile Include="Assets\Scripts\Joystic\UserInputData.cs" />
     <Compile Include="Assets\Scripts\Collision\CollisionSystem.cs" />
+    <Compile Include="Assets\Samples\Universal RP\12.1.9\URP Package Samples\LensFlares\Scripts\ScreenSpacePlacement.cs" />
     <Compile Include="Assets\Scripts\DI\IDataProvider.cs" />
     <Compile Include="Assets\Scripts\Collision\АpplyPromotion.cs" />
     <Compile Include="Assets\Scripts\AI\Behaviours\MoveAgentBehaviour.cs" />
     <Compile Include="Assets\Scripts\Collision\ApplyShoot.cs" />
     <Compile Include="Assets\Scripts\Joystic\ShootAbility.cs" />
     <Compile Include="Assets\Scripts\AI\BehaviourManager.cs" />
+    <Compile Include="Assets\Samples\Universal RP\12.1.9\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
     <Compile Include="Assets\Scripts\Collision\CollisionAbility.cs" />
     <Compile Include="Assets\Scripts\ECS\DogMoveSystem.cs" />
     <Compile Include="Assets\Scripts\Json\PlayerStats.cs" />
@@ -80,10 +85,12 @@
     <Compile Include="Assets\Scripts\Joystic\RunAbility.cs" />
     <Compile Include="Assets\SimpleTouchController\Scripts\PlayerMoveController.cs" />
     <Compile Include="Assets\Scripts\DI\injectionTest.cs" />
+    <Compile Include="Assets\Scripts\ChangeShader\ApplyChange.cs" />
     <Compile Include="Assets\Scripts\Collision\IAbilityTarget.cs" />
     <Compile Include="Assets\Scripts\Collision\TrapAbility.cs" />
     <Compile Include="Assets\Scripts\Joystic\CharacterShootSystem.cs" />
     <Compile Include="Assets\Scripts\Json\Settings.cs" />
+    <Compile Include="Assets\Scripts\Joystic\CharacterChangeSystem.cs" />
     <Compile Include="Assets\SimpleTouchController\Scripts\SimpleTouchController.cs" />
     <Compile Include="Assets\Scripts\Json\DownloadJSON.cs" />
     <Compile Include="Assets\Scripts\AI\Behaviours\WaitBehaviour.cs" />
@@ -96,6 +103,7 @@
     <Compile Include="Assets\Scripts\Json\GoogleDriveTools.cs" />
     <Compile Include="Assets\Scripts\Collision\ApplyTag.cs" />
     <Compile Include="Assets\Scripts\Joystic\Interfaces\IAbility.cs" />
+    <Compile Include="Assets\Scripts\Joystic\ChangeAbility.cs" />
     <Compile Include="Assets\Scripts\AI\Interface\IBehaviour.cs" />
     <Compile Include="Assets\Scripts\ECS\DogMoveComponent.cs" />
     <Compile Include="Assets\Scripts\Collision\Utils.cs" />
@@ -103,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SimpleTouchController\README.txt" />
+    <None Include="Assets\Samples\Universal RP\12.1.9\URP Package Samples\SharedAssets\Shaders\3DText.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -358,7 +367,7 @@
       <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
@@ -372,20 +381,17 @@
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
@@ -768,20 +774,17 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Transforms.Hybrid">
-      <HintPath>Library\ScriptAssemblies\Unity.Transforms.Hybrid.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Properties">
       <HintPath>Library\ScriptAssemblies\Unity.Properties.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Serialization">
       <HintPath>Library\ScriptAssemblies\Unity.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.CacheServer">
       <HintPath>Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
@@ -789,44 +792,26 @@
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Entities.Hybrid.EndToEnd.Tests">
-      <HintPath>Library\ScriptAssemblies\Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Properties.UI.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Properties.UI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Collections.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Collections.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Scenes">
-      <HintPath>Library\ScriptAssemblies\Unity.Scenes.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Extensions">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Extensions.dll</HintPath>
@@ -843,32 +828,11 @@
     <Reference Include="Elringus.UnityGoogleDrive.Editor">
       <HintPath>Library\ScriptAssemblies\Elringus.UnityGoogleDrive.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Scenes.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Scenes.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Extensions.Hybrid">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Entities.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Entities.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Entities.BuildUtils">
-      <HintPath>Library\ScriptAssemblies\Unity.Entities.BuildUtils.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Entities.Editor.Properties">
       <HintPath>Library\ScriptAssemblies\Unity.Entities.Editor.Properties.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Profiling.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.Profiling.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
@@ -876,11 +840,8 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
@@ -891,26 +852,11 @@
     <Reference Include="Unity.Entities.Hybrid">
       <HintPath>Library\ScriptAssemblies\Unity.Entities.Hybrid.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Services.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
-    </Reference>
-    <Reference Include="Elringus.UnityGoogleDrive.Runtime">
-      <HintPath>Library\ScriptAssemblies\Elringus.UnityGoogleDrive.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Jobs">
-      <HintPath>Library\ScriptAssemblies\Unity.Jobs.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
@@ -918,11 +864,8 @@
     <Reference Include="Unity.Services.Core.Environments">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Deformations">
-      <HintPath>Library\ScriptAssemblies\Unity.Deformations.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Properties.UI">
       <HintPath>Library\ScriptAssemblies\Unity.Properties.UI.dll</HintPath>
@@ -933,14 +876,110 @@
     <Reference Include="Unity.Serialization.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Serialization.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Entities.Hybrid.HybridComponents">
+      <HintPath>Library\ScriptAssemblies\Unity.Entities.Hybrid.HybridComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Transforms.Hybrid">
+      <HintPath>Library\ScriptAssemblies\Unity.Transforms.Hybrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Entities.Hybrid.EndToEnd.Tests">
+      <HintPath>Library\ScriptAssemblies\Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Scenes">
+      <HintPath>Library\ScriptAssemblies\Unity.Scenes.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Scenes.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Scenes.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Extensions.Hybrid">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="PPv2URPConverters">
+      <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Entities.BuildUtils">
+      <HintPath>Library\ScriptAssemblies\Unity.Entities.BuildUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Profiling.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.Profiling.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Elringus.UnityGoogleDrive.Runtime">
+      <HintPath>Library\ScriptAssemblies\Elringus.UnityGoogleDrive.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Jobs">
+      <HintPath>Library\ScriptAssemblies\Unity.Jobs.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Deformations">
+      <HintPath>Library\ScriptAssemblies\Unity.Deformations.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Entities.Hybrid.HybridComponents">
-      <HintPath>Library\ScriptAssemblies\Unity.Entities.Hybrid.HybridComponents.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
@@ -951,13 +990,17 @@
       <Project>{BB58BDB9-0118-34AC-159F-C20B892CD064}</Project>
       <Name>Zenject-Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
-      <Project>{C3A8897C-440E-7B13-7886-C2CB63C1E842}</Project>
-      <Name>Zenject-ReflectionBaking-Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Zenject.csproj">
       <Project>{9049823F-0501-2C73-EC4B-795393D3EA01}</Project>
       <Name>Zenject</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime.csproj">
+      <Project>{40FD7406-A1E3-3305-0048-6C485B099916}</Project>
+      <Name>Unity.RenderPipelines.HighDefinition.Config.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
+      <Project>{C3A8897C-440E-7B13-7886-C2CB63C1E842}</Project>
+      <Name>Zenject-ReflectionBaking-Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
       <Project>{19EE3B5B-319D-679D-1768-F3EFCCBD242F}</Project>

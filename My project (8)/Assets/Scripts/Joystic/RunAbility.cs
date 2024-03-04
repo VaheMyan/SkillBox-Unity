@@ -15,13 +15,14 @@ public class RunAbility : MonoBehaviour, IAbility
 
         if (bullent != null)
         {
+            Debug.Log("Hello!");
             var t = transform;
             var newBullet = Instantiate(bullent, t.position, t.rotation);
 
         }
         else
         {
-            
+
         }
 
     }

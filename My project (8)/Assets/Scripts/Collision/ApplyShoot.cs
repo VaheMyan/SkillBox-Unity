@@ -24,9 +24,9 @@ public class ApplyShoot : MonoBehaviour, IAbilityTarget
             {
                 Speed = -Speed;
             }
-            
+
         }
-        
+
     }
 
     private void Update()
@@ -38,7 +38,7 @@ public class ApplyShoot : MonoBehaviour, IAbilityTarget
         }
 
         //Treeger();
-        
+
     }
 
 }

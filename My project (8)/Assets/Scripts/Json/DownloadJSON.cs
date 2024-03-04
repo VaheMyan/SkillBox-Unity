@@ -15,7 +15,6 @@ public class DownloadJSON : MonoBehaviour
         public int ShootCout;
     }
 
-    public ShootAbility shootAbility;
     public PlayerStats playerStats;
 
     public void PostData()

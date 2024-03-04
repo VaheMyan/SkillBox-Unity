@@ -9,6 +9,7 @@ public class UserInputData : MonoBehaviour, IConvertGameObjectToEntity //glxavor
 {
     public MonoBehaviour ShootAction; // stex pahelu enq ayn gortoghutyuny vory kapvats a krakelu knopkai het
     public MonoBehaviour RunAction;
+    public MonoBehaviour ChangeMaterialAction;
 
     public float speed;
     public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
@@ -20,7 +21,7 @@ public class UserInputData : MonoBehaviour, IConvertGameObjectToEntity //glxavor
 
         }); // new MoveData()
 
-        if(ShootAction != null && ShootAction is IAbility) // stugum a ardyoq ShootAction-y lracvats a
+        if (ShootAction != null && ShootAction is IAbility) // stugum a ardyoq ShootAction-y lracvats a
         {
             dstManager.AddComponentData(entity, new ShootData()); // ev lracnum a
         }
@@ -28,6 +29,11 @@ public class UserInputData : MonoBehaviour, IConvertGameObjectToEntity //glxavor
         if (RunAction != null && RunAction is IAbility) // stugum a ardyoq ShootAction-y lracvats a
         {
             dstManager.AddComponentData(entity, new RunData()); // ev lracnum a
+        }
+
+        if (ChangeMaterialAction != null && ChangeMaterialAction is IAbility) // stugum a ardyoq ShootAction-y lracvats a
+        {
+            dstManager.AddComponentData(entity, new ChangeMaterialData()); // ev lracnum a
         }
 
 
@@ -39,6 +45,7 @@ public struct InputData : IComponentData // InputData()
     public float2 Move;
     public float Shoot;
     public float Run;
+    public float ChangeMat;
 
 }
 
@@ -53,6 +60,11 @@ public struct ShootData : IComponentData
 }
 
 public struct RunData : IComponentData
-{  
-    
+{
+
+}
+
+public struct ChangeMaterialData : IComponentData
+{
+    public int isDissolve;
 }

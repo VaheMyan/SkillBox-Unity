@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections;
 
 public class ShootAbility : MonoBehaviour, IAbility
 {
@@ -11,6 +12,8 @@ public class ShootAbility : MonoBehaviour, IAbility
     public int stats;
     public PlayerStats playerStats;
     public DownloadJSON downloadJSON;
+
+    public ParticleSystem effect;
 
     private void Start()
     {
@@ -35,11 +38,15 @@ public class ShootAbility : MonoBehaviour, IAbility
 
         if (bullent != null)
         {
-            var t = transform;
-            var newBullet = Instantiate(bullent, t.position, t.rotation);
-            stats++;
-            downloadJSON.playerStats.ShootCout = stats;
-            Debug.Log("aaaaaaaaaaaaaaaaaaa" + downloadJSON.playerStats.ShootCout);
+            var p = transform.position;
+            var r = transform.rotation;
+            //Debug.Log(p + " ------ " + r);
+            Instantiate(bullent, new Vector3(p.x, p.y + 0.8f, p.z), r);
+
+            effect.Play(); // fier effect Play
+            //stats++;
+            //downloadJSON.playerStats.ShootCout = stats;
+            //Debug.Log("aaaaaaaaaaaaaaaaaaa" + downloadJSON.playerStats.ShootCout);
 
         }
         else
