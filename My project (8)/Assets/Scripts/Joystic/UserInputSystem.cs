@@ -85,12 +85,13 @@ public class UserInputSystem : ComponentSystem
 
     protected override void OnUpdate()
     {
-        Entities.With(_inputQuery).ForEach((Entity entity, ref InputData inputData) => // kap a hastatvum InputData script-i het
+        Entities.With(_inputQuery).ForEach((Entity entity, ref InputData inputData, ChangeAbility changeAbility) => // kap a hastatvum InputData script-i het
         {
             inputData.Move = _moveInput;
             inputData.Shoot = _shootInput;
             inputData.Run = _runInput;
             inputData.ChangeMat = _changeMaterialInput;
+            changeAbility._changeMaterialInput = _changeMaterialInput;
         });
 
         Entities.With(_inputChangeMaterial).ForEach((Entity entity, ref ChangeMaterialData changeMaterialData, ref InputData inputData) => // kap a hastatvum InputData script-i het
@@ -113,7 +114,6 @@ public class UserInputSystem : ComponentSystem
                 {
                     if (startChanging == false)
                     {
-                        Debug.Log(_changeMaterialInput);
                         _changeMaterialBool = false;
                         changeMaterialData.isDissolve += speedChange;
                         startChanging = true;

@@ -8,8 +8,7 @@ public class ChangeAbility : MonoBehaviour, IAbility
     public float dissolve = 0;
     public bool isDissolve;
     public bool isDissolving;
-
-    public InputData inputData;
+    public float _changeMaterialInput;
 
     private float _runTime = float.MinValue;
 
@@ -21,7 +20,7 @@ public class ChangeAbility : MonoBehaviour, IAbility
 
         isDissolve = true;
 
-        if (dissolve <= 0.8f)
+        if (dissolve <= 0.9f)
         {
             dissolve += 1f * Time.deltaTime;
             dissolveMaterial.SetFloat("_Change", dissolve);
@@ -33,18 +32,15 @@ public class ChangeAbility : MonoBehaviour, IAbility
     }
     private void Update()
     {
-        Debug.Log(inputData.ChangeMat);
-        if (isDissolve == false)
+        Debug.Log(_changeMaterialInput);
+        if (_changeMaterialInput == 0)
         {
             if (dissolve > 0.15f && dissolve <= 1)
             {
                 dissolve -= 1f * Time.deltaTime;
                 dissolveMaterial.SetFloat("_Change", dissolve);
             }
-            else
-            {
-                isDissolve = true;
-            }
         }
     }
 }
+
