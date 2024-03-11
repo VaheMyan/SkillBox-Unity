@@ -114,6 +114,7 @@
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_XR_MODULE
+-define:HAS_VFX_GRAPH
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll"
@@ -357,6 +358,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.Universal.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.ShaderGraph.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VisualEffectGraph.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"

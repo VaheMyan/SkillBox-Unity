@@ -116,10 +116,13 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
+-define:HDRP_7_0_0_OR_NEWER
 -define:URP_7_0_0_OR_NEWER
 -define:SRP_7_0_0_OR_NEWER
+-define:HDRP_9_0_0_OR_NEWER
 -define:URP_9_0_0_OR_NEWER
 -define:SRP_9_0_0_OR_NEWER
+-define:HDRP_10_0_0_OR_NEWER
 -define:URP_10_0_0_OR_NEWER
 -define:SRP_10_0_0_OR_NEWER
 -define:PARTICLE_SYSTEM_MODULE
@@ -357,6 +360,7 @@
 -r:"C:/Users/User/Documents/GitHub/SkillBox-Unity/My project (8)/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Entities.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.HighDefinition.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.Universal.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"

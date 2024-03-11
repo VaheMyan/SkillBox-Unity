@@ -5,26 +5,18 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638445580448114484
-    m_Hash: 3182034753
+      ticks: 638457735193378858
+    m_Hash: 3833266886
   m_LockFileStatus:
     m_FilePath: C:/Users/User/Documents/GitHub/SkillBox-Unity/My project (8)/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638445580472327318
-    m_Hash: 484768831
+      ticks: 638457735193441513
+    m_Hash: 730113067
 m_EmbeddedPackageManifests:
-  m_ManifestsStatus:
-    C:/Users/User/Documents/GitHub/SkillBox-Unity/My project (8)/Packages/com.unity.render-pipelines.high-definition-config/package.json:
-      m_FilePath: C:/Users/User/Documents/GitHub/SkillBox-Unity/My project (8)/Packages/com.unity.render-pipelines.high-definition-config/package.json
-      m_PathExists: 1
-      m_ContentTrackingEnabled: 1
-      m_ModificationDate:
-        serializedVersion: 2
-        ticks: 638097793720000000
-      m_Hash: 951642156
+  m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: C:/Users/User/Documents/GitHub/SkillBox-Unity/My project (8)/Packages
@@ -941,27 +933,83 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.4.4
     nextVersion: 
-- packageId: com.unity.render-pipelines.high-definition-config@file:C:\Users\User\Documents\GitHub\SkillBox-Unity\My
-    project (8)\Packages\com.unity.render-pipelines.high-definition-config
-  testable: 1
+- packageId: com.unity.render-pipelines.high-definition@12.1.9
+  testable: 0
   isDirectDependency: 1
   version: 12.1.9
-  source: 3
-  resolvedPath: C:\Users\User\Documents\GitHub\SkillBox-Unity\My project (8)\Packages\com.unity.render-pipelines.high-definition-config
-  assetPath: Packages/com.unity.render-pipelines.high-definition-config
-  name: com.unity.render-pipelines.high-definition-config
-  displayName: High Definition RP Config
+  source: 2
+  resolvedPath: C:\Users\User\Documents\GitHub\SkillBox-Unity\My project (8)\Library\PackageCache\com.unity.render-pipelines.high-definition@12.1.9
+  assetPath: Packages/com.unity.render-pipelines.high-definition
+  name: com.unity.render-pipelines.high-definition
+  displayName: High Definition RP
   author:
     name: 
     email: 
     url: 
   category: 
   type: 
-  description: Configuration files for the High Definition Render Pipeline.
+  description: The High Definition Render Pipeline (HDRP) is a high-fidelity Scriptable
+    Render Pipeline built by Unity to target modern (Compute Shader compatible) platforms.
+    HDRP utilizes Physically-Based Lighting techniques, linear lighting, HDR lighting,
+    and a configurable hybrid Tile/Cluster deferred/Forward lighting architecture
+    and gives you the tools you need to create games, technical demos, animations,
+    and more to a high graphical standard.
   status: 0
   errors: []
   versions:
     all:
+    - 0.1.21
+    - 0.1.27
+    - 0.1.28
+    - 1.0.0-beta
+    - 1.0.1-beta
+    - 1.1.1-preview
+    - 1.1.2-preview
+    - 1.1.4-preview
+    - 1.1.5-preview
+    - 1.1.8-preview
+    - 1.1.10-preview
+    - 1.1.11-preview
+    - 2.0.1-preview
+    - 2.0.3-preview
+    - 2.0.4-preview
+    - 2.0.4-preview.1
+    - 2.0.5-preview
+    - 2.0.6-preview
+    - 2.0.7-preview
+    - 2.0.8-preview
+    - 3.0.0-preview
+    - 3.1.0-preview
+    - 3.3.0-preview
+    - 4.0.0-preview
+    - 4.0.1-preview
+    - 4.1.0-preview
+    - 4.2.0-preview
+    - 4.3.0-preview
+    - 4.6.0-preview
+    - 4.8.0-preview
+    - 4.9.0-preview
+    - 4.10.0-preview
+    - 5.0.0-preview
+    - 5.1.0-preview
+    - 5.2.0-preview
+    - 5.2.1-preview
+    - 5.2.2-preview
+    - 5.2.3-preview
+    - 5.3.1-preview
+    - 5.6.1-preview
+    - 5.7.2-preview
+    - 5.8.2-preview
+    - 5.9.0-preview
+    - 5.10.0-preview
+    - 5.13.0-preview
+    - 5.16.1-preview
+    - 6.5.2-preview
+    - 6.5.3-preview
+    - 6.7.1-preview
+    - 6.9.0-preview
+    - 6.9.1-preview
+    - 6.9.2-preview
     - 7.0.0
     - 7.0.1
     - 7.1.1
@@ -986,10 +1034,10 @@ m_ResolvedPackages:
     - 8.1.0
     - 8.2.0
     - 8.3.1
-    - 9.0.0-preview.15
-    - 9.0.0-preview.35
-    - 9.0.0-preview.57
-    - 9.0.0-preview.74
+    - 9.0.0-preview.13
+    - 9.0.0-preview.33
+    - 9.0.0-preview.54
+    - 9.0.0-preview.71
     - 10.0.0-preview.27
     - 10.1.0
     - 10.2.0
@@ -1012,14 +1060,48 @@ m_ResolvedPackages:
     - 12.1.9
     verified: 12.1.9
   dependencies:
+  - name: com.unity.mathematics
+    version: 1.2.4
+  - name: com.unity.burst
+    version: 1.8.2
+  - name: com.unity.modules.video
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
+  - name: com.unity.modules.imageconversion
+    version: 1.0.0
+  - name: com.unity.modules.terrain
+    version: 1.0.0
   - name: com.unity.render-pipelines.core
     version: 12.1.9
+  - name: com.unity.shadergraph
+    version: 12.1.9
+  - name: com.unity.visualeffectgraph
+    version: 12.1.9
+  - name: com.unity.render-pipelines.high-definition-config
+    version: 12.1.9
   resolvedDependencies:
+  - name: com.unity.mathematics
+    version: 1.2.6
+  - name: com.unity.burst
+    version: 1.8.2
+  - name: com.unity.modules.video
+    version: 1.0.0
+  - name: com.unity.modules.audio
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.modules.animation
+    version: 1.0.0
+  - name: com.unity.modules.imageconversion
+    version: 1.0.0
+  - name: com.unity.modules.terrain
+    version: 1.0.0
   - name: com.unity.render-pipelines.core
     version: 12.1.9
   - name: com.unity.ugui
-    version: 1.0.0
-  - name: com.unity.modules.ui
     version: 1.0.0
   - name: com.unity.modules.imgui
     version: 1.0.0
@@ -1027,7 +1109,20 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
-  keywords: []
+  - name: com.unity.shadergraph
+    version: 12.1.9
+  - name: com.unity.searcher
+    version: 4.9.1
+  - name: com.unity.visualeffectgraph
+    version: 12.1.9
+  - name: com.unity.render-pipelines.high-definition-config
+    version: 12.1.9
+  keywords:
+  - graphics
+  - performance
+  - rendering
+  - render
+  - pipeline
   registry:
     id: main
     name: 
@@ -1778,10 +1873,12 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.9.0
     - 1.9.1
+    - 1.9.2
     compatible:
     - 1.8.0
     - 1.9.0
     - 1.9.1
+    - 1.9.2
     verified: 1.8.0
   dependencies:
   - name: com.unity.ugui
@@ -4260,6 +4357,256 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 12.1.9
     nextVersion: 
+- packageId: com.unity.visualeffectgraph@12.1.9
+  testable: 0
+  isDirectDependency: 0
+  version: 12.1.9
+  source: 2
+  resolvedPath: C:\Users\User\Documents\GitHub\SkillBox-Unity\My project (8)\Library\PackageCache\com.unity.visualeffectgraph@12.1.9
+  assetPath: Packages/com.unity.visualeffectgraph
+  name: com.unity.visualeffectgraph
+  displayName: Visual Effect Graph
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: The Visual Effect Graph is a node based visual effect editor. It allows
+    you to author next generation visual effects that Unity simulates directly on
+    the GPU. The Visual Effect Graph is production-ready for the High Definition
+    Render Pipeline and runs on all platforms supported by it. Full support for the
+    Universal Render Pipeline and compatible mobile devices is still in development.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 4.3.0-preview
+    - 4.6.0-preview
+    - 4.8.0-preview
+    - 4.9.0-preview
+    - 4.10.0-preview
+    - 5.2.0-preview
+    - 5.2.1-preview
+    - 5.2.3-preview
+    - 5.3.1-preview
+    - 5.6.1-preview
+    - 5.7.2-preview
+    - 5.8.2-preview
+    - 5.10.0-preview
+    - 5.13.0-preview
+    - 5.16.1-preview
+    - 6.5.2-preview
+    - 6.5.3-preview
+    - 6.7.1-preview
+    - 6.9.0-preview
+    - 6.9.1-preview
+    - 6.9.2-preview
+    - 7.0.0
+    - 7.0.1
+    - 7.1.1
+    - 7.1.2
+    - 7.1.5
+    - 7.1.6
+    - 7.1.7
+    - 7.1.8
+    - 7.2.0
+    - 7.2.1
+    - 7.3.1
+    - 7.4.1
+    - 7.4.2
+    - 7.4.3
+    - 7.5.1
+    - 7.5.2
+    - 7.5.3
+    - 7.6.0
+    - 7.7.0
+    - 7.7.1
+    - 8.0.1
+    - 8.1.0
+    - 8.2.0
+    - 8.3.1
+    - 9.0.0-preview.13
+    - 9.0.0-preview.33
+    - 9.0.0-preview.54
+    - 9.0.0-preview.71
+    - 10.0.0-preview.27
+    - 10.1.0
+    - 10.2.0
+    - 10.2.1
+    - 10.2.2
+    - 10.3.1
+    - 10.3.2
+    - 10.4.0
+    - 10.5.0
+    - 10.5.1
+    - 10.6.0
+    - 10.7.0
+    - 10.8.0
+    - 10.8.1
+    - 10.9.0
+    - 10.10.0
+    - 10.10.1
+    - 12.1.9
+    compatible:
+    - 12.1.9
+    verified: 12.1.9
+  dependencies:
+  - name: com.unity.shadergraph
+    version: 12.1.9
+  - name: com.unity.render-pipelines.core
+    version: 12.1.9
+  resolvedDependencies:
+  - name: com.unity.shadergraph
+    version: 12.1.9
+  - name: com.unity.render-pipelines.core
+    version: 12.1.9
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.searcher
+    version: 4.9.1
+  keywords:
+  - vfx
+  - visualeffect
+  - graph
+  - effect
+  - particles
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 12.1.9
+    nextVersion: 
+- packageId: com.unity.render-pipelines.high-definition-config@12.1.9
+  testable: 0
+  isDirectDependency: 0
+  version: 12.1.9
+  source: 2
+  resolvedPath: C:\Users\User\Documents\GitHub\SkillBox-Unity\My project (8)\Library\PackageCache\com.unity.render-pipelines.high-definition-config@12.1.9
+  assetPath: Packages/com.unity.render-pipelines.high-definition-config
+  name: com.unity.render-pipelines.high-definition-config
+  displayName: High Definition RP Config
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Configuration files for the High Definition Render Pipeline.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 7.0.0
+    - 7.0.1
+    - 7.1.1
+    - 7.1.2
+    - 7.1.5
+    - 7.1.6
+    - 7.1.7
+    - 7.1.8
+    - 7.2.0
+    - 7.2.1
+    - 7.3.1
+    - 7.4.1
+    - 7.4.2
+    - 7.4.3
+    - 7.5.1
+    - 7.5.2
+    - 7.5.3
+    - 7.6.0
+    - 7.7.0
+    - 7.7.1
+    - 8.0.1
+    - 8.1.0
+    - 8.2.0
+    - 8.3.1
+    - 9.0.0-preview.15
+    - 9.0.0-preview.35
+    - 9.0.0-preview.57
+    - 9.0.0-preview.74
+    - 10.0.0-preview.27
+    - 10.1.0
+    - 10.2.0
+    - 10.2.1
+    - 10.2.2
+    - 10.3.1
+    - 10.3.2
+    - 10.4.0
+    - 10.5.0
+    - 10.5.1
+    - 10.6.0
+    - 10.7.0
+    - 10.8.0
+    - 10.8.1
+    - 10.9.0
+    - 10.10.0
+    - 10.10.1
+    - 12.1.9
+    compatible:
+    - 12.1.9
+    verified: 12.1.9
+  dependencies:
+  - name: com.unity.render-pipelines.core
+    version: 12.1.9
+  resolvedDependencies:
+  - name: com.unity.render-pipelines.core
+    version: 12.1.9
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 12.1.9
+    nextVersion: 
 - packageId: com.unity.editorcoroutines@1.0.0
   testable: 0
   isDirectDependency: 0
@@ -5896,6 +6243,7 @@ m_ResolvedPackages:
     - 1.12.0
     - 1.12.1
     - 1.12.2
+    - 1.12.4
     compatible:
     - 1.7.0
     - 1.7.1
@@ -5907,6 +6255,7 @@ m_ResolvedPackages:
     - 1.12.0
     - 1.12.1
     - 1.12.2
+    - 1.12.4
     verified: 1.7.1
   dependencies:
   - name: com.unity.modules.unitywebrequest

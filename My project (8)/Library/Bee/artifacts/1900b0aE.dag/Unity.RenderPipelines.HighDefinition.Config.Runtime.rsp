@@ -351,7 +351,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Packages/com.unity.render-pipelines.high-definition-config/Runtime/ShaderConfig.cs"
+"Library/PackageCache/com.unity.render-pipelines.high-definition-config@12.1.9/Runtime/ShaderConfig.cs"
 -langversion:9.0
 /unsafe+
 /deterministic
@@ -366,6 +366,6 @@
 /nowarn:1702
 /utf8output
 /preferreduilang:en-US
-
+-warn:0
 
 /additionalfile:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.HighDefinition.Config.Runtime.AdditionalFile.txt"

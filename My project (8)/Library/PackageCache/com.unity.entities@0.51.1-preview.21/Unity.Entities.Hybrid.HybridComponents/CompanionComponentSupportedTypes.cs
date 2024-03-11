@@ -37,7 +37,7 @@ namespace Unity.Entities.Conversion
 #if HDRP_7_0_0_OR_NEWER
             typeof(HDAdditionalLightData),
             typeof(HDAdditionalReflectionData),
-            typeof(DecalProjector),
+            //typeof(DecalProjector),
             typeof(PlanarReflectionProbe),
             typeof(DensityVolume),
 #if PROBEVOLUME_CONVERSION

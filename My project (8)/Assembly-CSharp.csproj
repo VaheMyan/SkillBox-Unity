@@ -822,17 +822,26 @@
     <Reference Include="Unity.Transforms">
       <HintPath>Library\ScriptAssemblies\Unity.Transforms.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Collections">
       <HintPath>Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Elringus.UnityGoogleDrive.Editor">
       <HintPath>Library\ScriptAssemblies\Elringus.UnityGoogleDrive.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Entities.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Entities.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.Editor.Properties">
       <HintPath>Library\ScriptAssemblies\Unity.Entities.Editor.Properties.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
@@ -945,6 +954,12 @@
     <Reference Include="Unity.Burst.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
@@ -993,10 +1008,6 @@
     <ProjectReference Include="Zenject.csproj">
       <Project>{9049823F-0501-2C73-EC4B-795393D3EA01}</Project>
       <Name>Zenject</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime.csproj">
-      <Project>{40FD7406-A1E3-3305-0048-6C485B099916}</Project>
-      <Name>Unity.RenderPipelines.HighDefinition.Config.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
       <Project>{C3A8897C-440E-7B13-7886-C2CB63C1E842}</Project>
