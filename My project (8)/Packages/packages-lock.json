@@ -227,22 +227,11 @@
       }
     },
     "com.unity.render-pipelines.high-definition-config": {
-      "version": "12.1.9",
-      "depth": 1,
-      "source": "builtin",
+      "version": "file:com.unity.render-pipelines.high-definition-config",
+      "depth": 0,
+      "source": "embedded",
       "dependencies": {
         "com.unity.render-pipelines.core": "12.1.9"
-      }
-    },
-    "com.unity.render-pipelines.universal": {
-      "version": "12.1.9",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.mathematics": "1.2.1",
-        "com.unity.burst": "1.8.2",
-        "com.unity.render-pipelines.core": "12.1.9",
-        "com.unity.shadergraph": "12.1.9"
       }
     },
     "com.unity.roslyn": {
@@ -383,6 +372,28 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.xr.legacyinputhelpers": {
+      "version": "2.1.10",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.vr": "1.0.0",
+        "com.unity.modules.xr": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.xr.management": {
+      "version": "4.4.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.subsystems": "1.0.0",
+        "com.unity.modules.vr": "1.0.0",
+        "com.unity.modules.xr": "1.0.0",
+        "com.unity.xr.legacyinputhelpers": "2.1.7"
       },
       "url": "https://packages.unity.com"
     },

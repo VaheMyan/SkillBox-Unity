@@ -62,22 +62,17 @@
     <Analyzer Include="C:\Users\User\Documents\GitHub\SkillBox-Unity\My project (8)\Library\PackageCache\com.unity.entities@0.51.1-preview.21\Unity.Entities\SourceGenerators\Unity.Entities.SourceGen.AuthoringComponent.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Samples\Universal RP\12.1.9\URP Package Samples\CameraStacking\3D Skybox\Scripts\SkyboxCamera.cs" />
     <Compile Include="Assets\Scripts\Collision\ApplyDamage.cs" />
-    <Compile Include="Assets\Samples\Universal RP\12.1.9\URP Package Samples\SharedAssets\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\SimpleTouchController\Scripts\InfoTouches.cs" />
-    <Compile Include="Assets\Samples\Universal RP\12.1.9\URP Package Samples\SharedAssets\Scripts\AutoLoadPipelineAsset.cs" />
     <Compile Include="Assets\Scripts\Joystic\CharacterMovSystem.cs" />
     <Compile Include="Assets\Scripts\Joystic\UserInputData.cs" />
     <Compile Include="Assets\Scripts\Collision\CollisionSystem.cs" />
-    <Compile Include="Assets\Samples\Universal RP\12.1.9\URP Package Samples\LensFlares\Scripts\ScreenSpacePlacement.cs" />
     <Compile Include="Assets\Scripts\DI\IDataProvider.cs" />
     <Compile Include="Assets\Scripts\Collision\АpplyPromotion.cs" />
     <Compile Include="Assets\Scripts\AI\Behaviours\MoveAgentBehaviour.cs" />
     <Compile Include="Assets\Scripts\Collision\ApplyShoot.cs" />
     <Compile Include="Assets\Scripts\Joystic\ShootAbility.cs" />
     <Compile Include="Assets\Scripts\AI\BehaviourManager.cs" />
-    <Compile Include="Assets\Samples\Universal RP\12.1.9\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
     <Compile Include="Assets\Scripts\Collision\CollisionAbility.cs" />
     <Compile Include="Assets\Scripts\ECS\DogMoveSystem.cs" />
     <Compile Include="Assets\Scripts\Json\PlayerStats.cs" />
@@ -111,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SimpleTouchController\README.txt" />
-    <None Include="Assets\Samples\Universal RP\12.1.9\URP Package Samples\SharedAssets\Shaders\3DText.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -801,6 +795,9 @@
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
@@ -822,9 +819,6 @@
     <Reference Include="Unity.Transforms">
       <HintPath>Library\ScriptAssemblies\Unity.Transforms.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Collections">
       <HintPath>Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
     </Reference>
@@ -842,6 +836,9 @@
     </Reference>
     <Reference Include="Unity.VisualEffectGraph.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Management.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
@@ -876,6 +873,9 @@
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Properties.UI">
       <HintPath>Library\ScriptAssemblies\Unity.Properties.UI.dll</HintPath>
     </Reference>
@@ -885,14 +885,14 @@
     <Reference Include="Unity.Serialization.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Serialization.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Entities.Hybrid.HybridComponents">
       <HintPath>Library\ScriptAssemblies\Unity.Entities.Hybrid.HybridComponents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Transforms.Hybrid">
       <HintPath>Library\ScriptAssemblies\Unity.Transforms.Hybrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -921,8 +921,8 @@
     <Reference Include="Unity.Scenes">
       <HintPath>Library\ScriptAssemblies\Unity.Scenes.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    <Reference Include="Unity.XR.Management">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Scenes.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Scenes.Editor.dll</HintPath>
@@ -932,12 +932,6 @@
     </Reference>
     <Reference Include="Unity.Mathematics.Extensions.Hybrid">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="PPv2URPConverters">
-      <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.BuildUtils">
       <HintPath>Library\ScriptAssemblies\Unity.Entities.BuildUtils.dll</HintPath>
@@ -975,8 +969,8 @@
     <Reference Include="Elringus.UnityGoogleDrive.Runtime">
       <HintPath>Library\ScriptAssemblies\Elringus.UnityGoogleDrive.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Jobs">
       <HintPath>Library\ScriptAssemblies\Unity.Jobs.dll</HintPath>
@@ -1008,6 +1002,10 @@
     <ProjectReference Include="Zenject.csproj">
       <Project>{9049823F-0501-2C73-EC4B-795393D3EA01}</Project>
       <Name>Zenject</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime.csproj">
+      <Project>{40FD7406-A1E3-3305-0048-6C485B099916}</Project>
+      <Name>Unity.RenderPipelines.HighDefinition.Config.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
       <Project>{C3A8897C-440E-7B13-7886-C2CB63C1E842}</Project>

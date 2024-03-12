@@ -120,8 +120,8 @@
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceIdBinder\FactoryToChoiceIdBinder5.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Factories\FactoryProviderWrapper.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Conventions\ConventionAssemblySelectionBinder.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Main\LazyInstanceInjector.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\MemoryPoolBase.cs" />
+    <Compile Include="Assets\Plugins\Zenject\Source\Main\LazyInstanceInjector.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Util\ReflectionTypeInfo.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\SubContainerBinder\FactorySubContainerBinder6.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\Signals\Internal\Binders\DeclareSignal\DeclareSignalIdRequireHandlerAsyncTickPriorityCopyBinder.cs" />
