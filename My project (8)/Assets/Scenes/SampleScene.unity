@@ -924,6 +924,7 @@ MonoBehaviour:
   dissolve: 0.1
   isDissolve: 0
   isDissolving: 0
+  _changeMaterialInput: 0
 --- !u!1 &671476870 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7926046042617591771, guid: 56457a130ac56844b84413acfd8774c5, type: 3}
