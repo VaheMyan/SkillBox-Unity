@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Entities;
@@ -12,6 +13,8 @@ public class UserInputData : MonoBehaviour, IConvertGameObjectToEntity //glxavor
     public MonoBehaviour ChangeMaterialAction;
 
     public float speed;
+    public string moveAnimHash;
+    public string moveAnimSpeedHash;
     public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
     {
         dstManager.AddComponentData(entity, new InputData()); // new InputData()
@@ -36,10 +39,16 @@ public class UserInputData : MonoBehaviour, IConvertGameObjectToEntity //glxavor
             dstManager.AddComponentData(entity, new ChangeMaterialData()); // ev lracnum a
         }
 
+        if (moveAnimHash != String.Empty)
+        {
+            dstManager.AddComponentData(entity, new AnimData());
+        }
+
 
     }
 }
 
+// Components
 public struct InputData : IComponentData // InputData()
 {
     public float2 Move;
@@ -67,4 +76,8 @@ public struct RunData : IComponentData
 public struct ChangeMaterialData : IComponentData
 {
     public int isDissolve;
+}
+public struct AnimData : IComponentData
+{
+
 }

@@ -17,12 +17,22 @@ public class CharacterMovSystem : ComponentSystem
     }
     protected override void OnUpdate()
     {
-        Entities.With(_moveQuery).ForEach((Entity entity, Transform transform, ref InputData inputData, ref MoveData move) => // move
+        Entities.With(_moveQuery).ForEach(
+            (Entity entity, Transform transform, ref InputData inputData, ref MoveData move) => // move
         {
             var pos = transform?.position;
             pos += new Vector3(inputData.Move.x * move.Speed, y: 0, inputData.Move.y * move.Speed);
             transform.position = (Vector3)pos;
+
+            var dir = new Vector3(inputData.Move.x, 0, inputData.Move.y);
+            if (dir == Vector3.zero) return;
+
+            var rot = transform.rotation;
+            var newRot = Quaternion.LookRotation(Vector3.Normalize(dir));
+            if (newRot == rot) return;
+            transform.rotation = Quaternion.Lerp(rot, newRot, Time.DeltaTime * 10);
         });
+
         Entities.With(_runQuery).ForEach((Entity entity, ref MoveData move) => // run
         {
             //move.Speed += 10; 

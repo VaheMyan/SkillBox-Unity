@@ -11,7 +11,7 @@ public class CollisionAbility : MonoBehaviour, IConvertGameObjectToEntity, IAbil
     public Collider Collider;
 
     public List<MonoBehaviour> collisionActions = new List<MonoBehaviour>(); // tsegh petq a pahenq hghumner
-    public List<IAbilityTarget> collisionActionsAbilities = new List<IAbilityTarget>();
+    public List<IAbility> collisionActionsAbilities = new List<IAbility>();
 
     [HideInInspector] public List<Collider> collisions;
 
@@ -19,7 +19,7 @@ public class CollisionAbility : MonoBehaviour, IConvertGameObjectToEntity, IAbil
     {
         foreach (var action in collisionActions)
         {
-            if (action is IAbilityTarget ability) // ete action-y lracvats a =>
+            if (action is IAbility ability) // ete action-y lracvats a =>
             {
                 collisionActionsAbilities.Add(ability);
             }
@@ -34,11 +34,14 @@ public class CollisionAbility : MonoBehaviour, IConvertGameObjectToEntity, IAbil
     {
         foreach (var action in collisionActionsAbilities)
         {
-            action.Targets = new List<GameObject>();
-            collisions.ForEach(c =>
+            if (action is IAbilityTarget actionTarget)
             {
-                if (c != null) action.Targets.Add(c.gameObject); // avelacnum enq Target-neri canki gameObject-neri vra
-            });
+                actionTarget.Targets = new List<GameObject>();
+                collisions.ForEach(c =>
+                {
+                    if (c != null) actionTarget.Targets.Add(c.gameObject); // avelacnum enq Target-neri canki gameObject-neri vra
+                });
+            }
             action.Execute();
         }
     }

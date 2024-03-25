@@ -32,7 +32,7 @@ public class ChangeAbility : MonoBehaviour, IAbility
     }
     private void Update()
     {
-        Debug.Log(_changeMaterialInput);
+        //Debug.Log(_changeMaterialInput);
         if (_changeMaterialInput == 0)
         {
             if (dissolve > 0.15f && dissolve <= 1)
