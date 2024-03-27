@@ -29,7 +29,6 @@ public class ShootAbility : MonoBehaviour, IAbility
             //stats = new PlayerStats();
         }
     }
-
     public void Execute()
     {
         if (Time.time < _shootTime + shootDelay) return; // ete jamanaky poqr e _shootTime + shootDelay-ic apa noric (return)

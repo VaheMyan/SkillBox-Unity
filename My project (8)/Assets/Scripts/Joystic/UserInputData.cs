@@ -13,8 +13,12 @@ public class UserInputData : MonoBehaviour, IConvertGameObjectToEntity //glxavor
     public MonoBehaviour ChangeMaterialAction;
 
     public float speed;
-    public string moveAnimHash;
+    public string moveAnimHash; // Move anim
     public string moveAnimSpeedHash;
+    public string attackAnimHash; // Attack anim
+    public string getHitAnimHash; // Hit anim
+    public string dieAnimHash; // Die anim
+
     public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
     {
         dstManager.AddComponentData(entity, new InputData()); // new InputData()
@@ -41,10 +45,20 @@ public class UserInputData : MonoBehaviour, IConvertGameObjectToEntity //glxavor
 
         if (moveAnimHash != String.Empty)
         {
-            dstManager.AddComponentData(entity, new AnimData());
+            dstManager.AddComponentData(entity, new MoveAnimData());
         }
-
-
+        if (attackAnimHash != String.Empty)
+        {
+            dstManager.AddComponentData(entity, new AttackAnimData());
+        }
+        if (getHitAnimHash != String.Empty)
+        {
+            dstManager.AddComponentData(entity, new GetHitAnimData());
+        }
+        if (dieAnimHash != String.Empty)
+        {
+            dstManager.AddComponentData(entity, new DieAnimData());
+        }
     }
 }
 
@@ -55,6 +69,7 @@ public struct InputData : IComponentData // InputData()
     public float Shoot;
     public float Run;
     public float ChangeMat;
+    public int CollideInput;
 
 }
 
@@ -77,7 +92,19 @@ public struct ChangeMaterialData : IComponentData
 {
     public int isDissolve;
 }
-public struct AnimData : IComponentData
+public struct MoveAnimData : IComponentData
+{
+
+}
+public struct AttackAnimData : IComponentData
+{
+
+}
+public struct GetHitAnimData : IComponentData
+{
+
+}
+public struct DieAnimData : IComponentData
 {
 
 }

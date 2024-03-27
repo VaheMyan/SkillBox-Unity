@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Entities;
+using System.Threading.Tasks;
 
 public class CharacterHealth : MonoBehaviour
 {
     public Settings settings;
     public ShootAbility ShootAbility;
     public DownloadJSON downloadJSON;
+    public UserInputSystem userInputSystem;
 
-    public int _health = int.MaxValue;
+    public int _health;
+
+    public bool isDie = false;
+    public bool isDisable = false;
 
     public int Health
     {
@@ -19,8 +24,9 @@ public class CharacterHealth : MonoBehaviour
             _health = value;
             if (_health <= 0)
             {
-                WriteStatisctics();
-                Destroy(this.gameObject);
+                Die();
+                //WriteStatisctics();
+                //Destroy(this.gameObject);
 
             }
         }
@@ -42,6 +48,14 @@ public class CharacterHealth : MonoBehaviour
 
         Health = settings.HeroHealth;
 
+    }
+    public async void Die()
+    {
+        isDie = true;
+        await Task.Delay(2500);
+        isDisable = true;
+        Debug.Log("STOP!");
+        Time.timeScale = 0f;
     }
 
 }

@@ -2,23 +2,30 @@ using UnityEngine;
 using Unity.Mathematics;
 using Unity.Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 public class CollisionSystem : ComponentSystem
 {
     private EntityQuery _collisionQuery;
+    private EntityQuery _getHitQuery;
 
     public Collider[] _results = new Collider[50];
+    public int size = 0;
 
     protected override void OnCreate()
     {
         _collisionQuery = GetEntityQuery(ComponentType.ReadOnly<ActorColliderData>(), ComponentType.ReadOnly<Transform>());
+        _getHitQuery = GetEntityQuery(ComponentType.ReadOnly<InputData>(), ComponentType.ReadOnly<Transform>());
     }
 
     protected override void OnUpdate()
     {
         var dsManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+
+        Entities.With(_getHitQuery).ForEach(
+            (Entity entity, ref InputData inputData) =>
+            {
+                inputData.CollideInput = size;
+            });
 
         Entities.With(_collisionQuery).ForEach(
             (Entity entity, CollisionAbility abilityCollision, ref ActorColliderData colliderData) =>
@@ -27,9 +34,9 @@ public class CollisionSystem : ComponentSystem
                 float3 position = gameObject.transform.position;
                 Quaternion rotation = gameObject.transform.rotation;
 
-                abilityCollision.collisions?.Clear();
+                abilityCollision.collideInput = size;
 
-                int size = 0;
+                abilityCollision.collisions?.Clear();
 
                 switch (colliderData.ColliderType)
                 {
@@ -55,9 +62,9 @@ public class CollisionSystem : ComponentSystem
                         throw new ArgumentOutOfRangeException();
                 }
 
-                if(size > 0)
+                if (size > 1)
                 {
-                    foreach(var result in _results)
+                    foreach (var result in _results)
                     {
                         abilityCollision?.collisions?.Add(result);
                     }

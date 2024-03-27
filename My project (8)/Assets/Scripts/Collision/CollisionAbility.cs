@@ -9,9 +9,10 @@ using DefultNamespace;
 public class CollisionAbility : MonoBehaviour, IConvertGameObjectToEntity, IAbility
 {
     public Collider Collider;
-
+    InputData inputData;
     public List<MonoBehaviour> collisionActions = new List<MonoBehaviour>(); // tsegh petq a pahenq hghumner
     public List<IAbility> collisionActionsAbilities = new List<IAbility>();
+    public int collideInput;
 
     [HideInInspector] public List<Collider> collisions;
 

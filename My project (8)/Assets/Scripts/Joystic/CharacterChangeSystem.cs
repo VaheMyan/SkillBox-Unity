@@ -15,7 +15,7 @@ public class CharacterChangeSystem : ComponentSystem
         {
             if (input.ChangeMat > 0f && inputData.ChangeMaterialAction != null && inputData.ChangeMaterialAction is IAbility ability)
             {
-                ability.Execute();
+                //ability.Execute();
             }
 
         });
