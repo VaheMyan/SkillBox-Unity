@@ -53,8 +53,9 @@ public class ShrinkAbility : MonoBehaviour, IAbility
 
         Sequence blockSequence = DOTween.Sequence();
         blockSequence.Append(transform.DOMove(new Vector3(startPosition.x, 0.5f, startPosition.z), duration))
+                    .SetEase(Ease.OutCirc);
+        blockSequence.Append(transform.DOMove(new Vector3(startPosition.x, 3.5f, startPosition.z), duration))
                     .SetEase(Ease.OutCirc)
-                    .SetLoops(-1, LoopType.Yoyo)
                     .OnComplete(() => isAnimating = false);
     }
 }

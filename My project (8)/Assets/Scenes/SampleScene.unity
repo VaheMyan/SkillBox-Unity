@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 3781.7158, g: 2622.8145, b: 2170.6016, a: 1}
+  m_IndirectSpecularColor: {r: 3787.4775, g: 2626.9238, b: 2171.9531, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -855,7 +855,7 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 78d6797861f49ca49bf6a70e08281247, type: 2}
   ShootAbility: {fileID: 379559153}
   downloadJSON: {fileID: 1744714142}
-  _health: 10000000
+  _health: 100
   isDie: 0
   isDisable: 0
 --- !u!4 &379559168 stripped
