@@ -1,77 +1,61 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEditor;
 
 public class ConfigSelector : MonoBehaviour
 {
-    [MenuItem("Tools/Clear PlayerPrefs %#d")]
-    public static void Clear()
+    public enum ConfigType
     {
-        PlayerPrefs.DeleteAll();
-        Debug.Log("All PlayerPrefs cleared");
+        Settings,
+        PlayerStats
     }
 
     public ScriptableObject selectedConfig;
+    public ConfigType currentConfigType = ConfigType.Settings;
 
-    public List<ScriptableObject> configList = new List<ScriptableObject>();
-    public string[] configNames = new string[] { "Settings", "PlayerStats" };
+    public List<ScriptableObject> settingsList = new List<ScriptableObject>();
+    public List<ScriptableObject> playerStatsList = new List<ScriptableObject>();
+
+    public TMP_Dropdown configTypeDropdown;
 
     void OnEnable()
     {
-        string[] guids = AssetDatabase.FindAssets("t:Settings");
-        string[] guids2 = AssetDatabase.FindAssets("t:PlayerStats");
+        configTypeDropdown.ClearOptions();
+        configTypeDropdown.AddOptions(new List<string> { "Settings", "PlayerStats" });
 
-        configList.Clear();
-
-        foreach (string guid in guids)
-        {
-            string path = AssetDatabase.GUIDToAssetPath(guid);
-            ScriptableObject obj = AssetDatabase.LoadAssetAtPath<ScriptableObject>(path);
-
-            if (obj != null && obj != selectedConfig)
-            {
-                configList.Add(obj);
-            }
-        }
-        foreach (string guid in guids2)
-        {
-            string path = AssetDatabase.GUIDToAssetPath(guid);
-            ScriptableObject obj = AssetDatabase.LoadAssetAtPath<ScriptableObject>(path);
-
-            if (obj != null && obj != selectedConfig)
-            {
-                configList.Add(obj);
-            }
-        }
+        configTypeDropdown.value = (int)currentConfigType;
+        configTypeDropdown.onValueChanged.AddListener(OnConfigTypeChanged);
     }
 
-    void OnGUI()
+    void OnConfigTypeChanged(int index)
     {
-        if (configList.Count > 0)
+        currentConfigType = (ConfigType)index;
+        UpdateSelectedConfig();
+    }
+
+    void UpdateSelectedConfig()
+    {
+        switch (currentConfigType)
         {
-            for (int i = 0; i < configList.Count; i++)
-            {
-                configNames[i] = configList[i].name;
-            }
-
-            int selectedIndex = configList.IndexOf(selectedConfig);
-
-            if (selectedIndex == -1)
-                selectedIndex = 0;
-
-            selectedIndex = EditorGUILayout.Popup("Select Config", selectedIndex, configNames);
-            Debug.Log(selectedIndex);
-
-            switch (selectedIndex)
-            {
-                case 0:
-                    selectedConfig = configList[selectedIndex];
-                    break;
-                case 1:
-                    selectedConfig = configList[selectedIndex];
-                    break;
-            }
+            case ConfigType.Settings:
+                if (settingsList.Count > 0)
+                {
+                    selectedConfig = settingsList[0];
+                }
+                break;
+            case ConfigType.PlayerStats:
+                if (playerStatsList.Count > 0)
+                {
+                    selectedConfig = playerStatsList[0];
+                }
+                break;
         }
+        UseSelectedConfig();
+    }
+
+    void UseSelectedConfig()
+    {
+        Debug.Log("Config name is a: " + selectedConfig.name);
     }
 }
