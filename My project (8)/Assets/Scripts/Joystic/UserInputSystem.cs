@@ -147,7 +147,6 @@ public class UserInputSystem : ComponentSystem
 
             if (stopRuning == true)
             {
-                Debug.Log(_runInput);
                 if (_runInput == 0)
                 {
                     if (startRuning == false)

@@ -1,7 +1,9 @@
 using System;
+using UnityEngine;
 
 [Serializable]
-public class PlayerStats
+[CreateAssetMenu]
+public class PlayerStats : ScriptableObject
 {
     public int shootsCount = 0;
 }

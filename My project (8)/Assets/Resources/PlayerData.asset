@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::Data
-  _health: 100
+  _health: 0
   _shootCout: 0
