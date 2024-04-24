@@ -11,7 +11,9 @@ public class CharacterHealth : MonoBehaviour
     public DownloadJSON downloadJSON;
     public UserInputSystem userInputSystem;
 
-    public int _health;
+    public int _health = int.MaxValue;
+
+    private ViewModel viewModel;
 
     public bool isDie = false;
     public bool isDisable = false;
@@ -21,7 +23,9 @@ public class CharacterHealth : MonoBehaviour
         get => _health;
         set
         {
+            if (_health == value) return;
             _health = value;
+            if (viewModel != null) viewModel.Health = _health.ToString();
             if (_health <= 0)
             {
                 Die();
@@ -43,11 +47,12 @@ public class CharacterHealth : MonoBehaviour
 
     private void Start()
     {
+        viewModel = FindObjectOfType<ViewModel>();
+
         var jsonString = JsonUtility.ToJson(ShootAbility.stats);
         //Debug.Log("Shoot Cout is : " + jsonString);
 
         Health = settings.HeroHealth;
-
     }
     public async void Die()
     {

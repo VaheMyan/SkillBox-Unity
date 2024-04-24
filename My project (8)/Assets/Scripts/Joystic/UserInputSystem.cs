@@ -130,16 +130,18 @@ public class UserInputSystem : ComponentSystem
             }
         });
 
-        Entities.With(_inputRun).ForEach((Entity entity, ref MoveData moveData) => // kap a hastatvum InputData script-i het
+        Entities.With(_inputRun).ForEach((Entity entity, ref MoveData moveData, UserInputData userInputData) => // kap a hastatvum InputData script-i het
         {
-            float speedChange = _runBool ? -10 : 10;
+            float speedChange = _runBool ? -0.2f : 0.2f;
+
+            moveData.Speed = userInputData.speed;
 
             if (stopRuning == false)
             {
                 if (_runInput == 1)
                 {
                     _runBool = true;
-                    moveData.Speed += speedChange;
+                    userInputData.speed += speedChange;
                     startRuning = false;
                     stopRuning = true;
                 }
@@ -152,7 +154,7 @@ public class UserInputSystem : ComponentSystem
                     if (startRuning == false)
                     {
                         _runBool = false;
-                        moveData.Speed += speedChange;
+                        userInputData.speed += speedChange;
                         startRuning = true;
                         stopRuning = false;
                     }

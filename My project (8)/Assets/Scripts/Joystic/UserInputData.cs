@@ -24,7 +24,7 @@ public class UserInputData : MonoBehaviour, IConvertGameObjectToEntity //glxavor
         dstManager.AddComponentData(entity, new InputData()); // new InputData()
         dstManager.AddComponentData(entity, new MoveData
         {
-            Speed = speed / 100
+            Speed = speed
 
         }); // new MoveData()
 

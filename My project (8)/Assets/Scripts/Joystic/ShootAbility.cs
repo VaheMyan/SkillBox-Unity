@@ -15,8 +15,11 @@ public class ShootAbility : MonoBehaviour, IAbility
 
     public ParticleSystem effect;
 
+    private CharacterData _characterData;
+
     private void Start()
     {
+        _characterData = GetComponent<CharacterData>();
         //stats = new PlayerStats();
         var jsonString = PlayerPrefs.GetString("Stats");
 
@@ -46,6 +49,8 @@ public class ShootAbility : MonoBehaviour, IAbility
             //stats++;
             //downloadJSON.playerStats.ShootCout = stats;
             //Debug.Log("aaaaaaaaaaaaaaaaaaa" + downloadJSON.playerStats.ShootCout);
+
+            _characterData.Score(10);
 
         }
         else
