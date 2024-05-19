@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CharacterData : MonoBehaviour
@@ -28,5 +29,10 @@ public class CharacterData : MonoBehaviour
             if (!(action is ILevelUp levelUp)) return;
             levelUp.LevelUp(this, currentLevel);
         }
+    }
+    private void Start()
+    {
+        InventoryUIRoot = GameObject.Find("Panel");
+        if (InventoryUIRoot != null) GameObject.Find("Inventory").SetActive(false);
     }
 }

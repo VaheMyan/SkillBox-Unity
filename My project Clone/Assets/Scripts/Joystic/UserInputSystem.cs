@@ -87,21 +87,21 @@ public class UserInputSystem : ComponentSystem
     {
         Entities.With(_inputQuery).ForEach((Entity entity, ref InputData inputData, ChangeAbility changeAbility, CharacterHealth characterHealth) => // kap a hastatvum InputData script-i het
         {
-            if (characterHealth.isDisable)
-            {
-                _moveAcion.Disable(); // kangnecvum a _moveAcion-i ashxatanqy
-                _shootAction.Disable(); // kangnecvum a _shootAction-i ashxatanqy
-                _runAction.Disable();
-                _changeMaterialAction.Disable();
-            }
+            //if (characterHealth.isDisable)
+            //{
+            //    _moveAcion.Disable(); // kangnecvum a _moveAcion-i ashxatanqy
+            //    _shootAction.Disable(); // kangnecvum a _shootAction-i ashxatanqy
+            //    _runAction.Disable();
+            //    _changeMaterialAction.Disable();
+            //}
 
-            if (characterHealth.isDisable == false)
-            {
-                _moveAcion.Enable(); // kangnecvum a _moveAcion-i ashxatanqy
-                _shootAction.Enable(); // kangnecvum a _shootAction-i ashxatanqy
-                _runAction.Enable();
-                _changeMaterialAction.Enable();
-            }
+            //if (characterHealth.isDisable == false)
+            //{
+            //    _moveAcion.Enable(); // kangnecvum a _moveAcion-i ashxatanqy
+            //    _shootAction.Enable(); // kangnecvum a _shootAction-i ashxatanqy
+            //    _runAction.Enable();
+            //    _changeMaterialAction.Enable();
+            //}
             inputData.Move = _moveInput;
             inputData.Shoot = _shootInput;
             inputData.Run = _runInput;

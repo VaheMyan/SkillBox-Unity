@@ -2,23 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Photon.Pun;
 
 public class ShrinkAbility : MonoBehaviour, IAbility
 {
-    //public float scaleFactor = 0.2f;
     public float duration = 2.5f;
-
-    //private Vector3 startScale;
-    private Vector3 startPosition;
-    //private bool started = false;
     public Transform targetTransform;
+    public List<Transform> targetTransforms = new List<Transform>();
     public float distance;
+    public GameObject[] players;
+
+    private Vector3 startPosition;
     private bool isAnimating = false;
 
     void Start()
     {
         //startScale = transform.localScale;
         startPosition = transform.localPosition;
+        StartCoroutine(FindTargetTransform());
     }
     public void Execute()
     {
@@ -50,6 +51,36 @@ public class ShrinkAbility : MonoBehaviour, IAbility
         }
     }
 
+    IEnumerator FindTargetTransform()
+    {
+        while (true)
+        {
+            players = GameObject.FindGameObjectsWithTag("Player");
+            foreach (GameObject player in players)
+            {
+                if (!targetTransforms.Contains(player.transform))
+                {
+                    targetTransforms.Add(player.transform);
+                }
+
+            }
+
+            if (targetTransforms.Count > 1 && targetTransforms[0] != null && targetTransforms[1] != null)
+            {
+                if (Vector3.Distance(transform.position, targetTransforms[0].position) > Vector3.Distance(transform.position, targetTransforms[1].position))
+                {
+                    targetTransform = targetTransforms[1];
+                }
+                else if (Vector3.Distance(transform.position, targetTransforms[0].position) < Vector3.Distance(transform.position, targetTransforms[1].position))
+                {
+                    targetTransform = targetTransforms[0];
+                }
+            }
+
+            yield return new WaitForSeconds(1);
+        }
+    }
+
     private void StartFall()
     {
         isAnimating = true;
@@ -61,8 +92,8 @@ public class ShrinkAbility : MonoBehaviour, IAbility
                     .SetEase(Ease.OutCirc)
                     .OnComplete(() => isAnimating = false);
     }
-    public void FindGameObjectWithTag(string tag)
+    public void FindGameObjectWithName(string name)
     {
-        targetTransform = GameObject.FindGameObjectWithTag(tag).transform;
+        targetTransform = GameObject.Find(name).transform;
     }
 }

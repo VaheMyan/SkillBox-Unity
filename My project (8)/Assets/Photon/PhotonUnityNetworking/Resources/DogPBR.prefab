@@ -6133,7 +6133,6 @@ GameObject:
   - component: {fileID: 8422892626600249584}
   - component: {fileID: 8422892626592999198}
   - component: {fileID: 379559157}
-  - component: {fileID: 379559146}
   - component: {fileID: 379559150}
   - component: {fileID: 379559153}
   - component: {fileID: 379559163}
@@ -6145,6 +6144,7 @@ GameObject:
   - component: {fileID: 5100424330468604317}
   - component: {fileID: 8086372232532705161}
   - component: {fileID: 4448086628558019267}
+  - component: {fileID: 6312875964473263415}
   m_Layer: 0
   m_Name: DogPBR
   m_TagString: Player
@@ -6204,19 +6204,6 @@ CapsuleCollider:
   m_Height: 1.5087373
   m_Direction: 1
   m_Center: {x: -0, y: 0.6897738, z: -0.015889078}
---- !u!114 &379559146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8422892626600285392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 1
 --- !u!114 &379559150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6271,7 +6258,7 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 78d6797861f49ca49bf6a70e08281247, type: 2}
   ShootAbility: {fileID: 379559153}
   downloadJSON: {fileID: 0}
-  _health: 10000000
+  _health: 2147483647
   isDie: 0
   isDisable: 0
 --- !u!195 &379559169
@@ -6340,7 +6327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3208abf9371ca4747b5764f4074bfd72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryUIRoot: {fileID: 120291582713958628, guid: f17b2e7162cf93b4ab4a830840e2ee98, type: 3}
+  InventoryUIRoot: {fileID: 0}
   levelUpActions:
   - {fileID: 379559179}
   currentLevel: 1
@@ -6373,7 +6360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObservedComponentsFoldoutOpen: 1
   Group: 0
-  prefixField: -1
+  prefixField: 0
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 0
@@ -6435,6 +6422,19 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
+--- !u!114 &6312875964473263415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8422892626600285392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConversionMode: 1
 --- !u!1 &8422892626600285394
 GameObject:
   m_ObjectHideFlags: 0

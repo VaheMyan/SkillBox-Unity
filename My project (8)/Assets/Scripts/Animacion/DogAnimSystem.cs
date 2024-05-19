@@ -3,6 +3,7 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
+using Photon.Pun;
 
 public class DogAnimSystem : ComponentSystem
 {
@@ -15,9 +16,9 @@ public class DogAnimSystem : ComponentSystem
 
     protected override void OnUpdate()
     {
-        Entities.With(_query).ForEach((Entity entity, ref InputData move, Animator animator, UserInputData inputData, CharacterHealth characterHealth) =>
+        Entities.With(_query).ForEach((Entity entity, ref InputData move, Animator animator, UserInputData inputData, CharacterHealth characterHealth, PhotonView photonView) =>
         {
-            if (animator != null)
+            if (animator != null && inputData != null && characterHealth != null)
             {
                 animator.SetBool(inputData.moveAnimHash, Math.Abs(move.Move.x) > 0.05f || Math.Abs(move.Move.y) > 0.05f); // Walk anim
                 animator.SetBool(inputData.attackAnimHash, Math.Abs(move.Shoot) > 0f); // Attack aim
@@ -46,6 +47,10 @@ public class DogAnimSystem : ComponentSystem
 
                 if (inputData.moveAnimSpeedHash == String.Empty) return;
                 animator.SetFloat(inputData.moveAnimSpeedHash, 5 * result);
+            }
+            else
+            {
+                Debug.LogError("Problem");
             }
         });
     }

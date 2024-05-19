@@ -67,15 +67,17 @@ public class CharacterHealth : MonoBehaviour, IConvertGameObjectToEntity
         {
             isDie = true;
             await Task.Delay(2500);
+            isDisable = true;
             Destroy(this.gameObject);
             _dsManager.DestroyEntity(_entity);
             await Task.Delay(2000);
             Debug.Log("Restart");
             networkManager.StartDisconnected();
-            await Task.Delay(2000);
+            await Task.Delay(4000);
             if (networkManager.endDisconnected)
             {
                 networkManager.StartConected();
+                isDisable = true;
             }
         }
         else

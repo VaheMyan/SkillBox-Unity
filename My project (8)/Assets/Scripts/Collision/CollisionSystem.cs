@@ -24,7 +24,14 @@ public class CollisionSystem : ComponentSystem
         Entities.With(_getHitQuery).ForEach(
             (Entity entity, ref InputData inputData) =>
             {
-                inputData.CollideInput = size;
+                if (dsManager.Exists(entity))
+                {
+                    inputData.CollideInput = size;
+                }
+                else
+                {
+                    Debug.LogWarning("Попытка обновить несуществующую сущность (InputData)");
+                }
             });
 
         Entities.With(_collisionQuery).ForEach(
@@ -32,45 +39,51 @@ public class CollisionSystem : ComponentSystem
             {
                 if (abilityCollision == null) return;
 
-                var gameObject = abilityCollision.gameObject; // lracnum a position-y rotation-y gameObject-y
-                float3 position = gameObject.transform.position;
-                Quaternion rotation = gameObject.transform.rotation;
-
-                abilityCollision.collideInput = size;
-
-                abilityCollision.collisions?.Clear();
-
-                switch (colliderData.ColliderType)
+                if (dsManager.Exists(entity))
                 {
-                    case (UnityEngine.Tilemaps.Tile.ColliderType)ColliderType.Sphere:
-                        size = Physics.OverlapSphereNonAlloc(colliderData.SphereCenter + position, // stugum e baxumy erb collider-y Sphere-a e =>
-                            colliderData.SphereRadius, _results);
-                        break;
-                    case (UnityEngine.Tilemaps.Tile.ColliderType)ColliderType.Capsule:
-                        var center =
-                            ((colliderData.CapsuleStart + position) + (colliderData.CapsuleEnd + position)) / 2f;
-                        var point1 = colliderData.CapsuleStart + position;
-                        var point2 = colliderData.CapsuleEnd + position;
-                        point1 = (float3)(rotation * (point1 - center)) + center;
-                        point2 = (float3)(rotation * (point2 - center)) + center;
-                        size = Physics.OverlapCapsuleNonAlloc(point1,
-                            point2,
-                            colliderData.CapsuleRadius, _results);
-                        break;
-                    case (UnityEngine.Tilemaps.Tile.ColliderType)ColliderType.Box:
-                        size = Physics.OverlapBoxNonAlloc(colliderData.BoxCenter + position,
-                            colliderData.BoxHalfExtents, _results, colliderData.BoxOrientation * rotation);
-                        break;
-                        throw new ArgumentOutOfRangeException();
-                }
+                    var gameObject = abilityCollision.gameObject; // lracnum a position-y rotation-y gameObject-y
+                    float3 position = gameObject.transform.position;
+                    Quaternion rotation = gameObject.transform.rotation;
 
-                if (size > 1)
-                {
-                    foreach (var result in _results)
+                    abilityCollision.collideInput = size;
+                    abilityCollision.collisions?.Clear();
+
+                    switch (colliderData.ColliderType)
                     {
-                        abilityCollision?.collisions?.Add(result);
+                        case (UnityEngine.Tilemaps.Tile.ColliderType)ColliderType.Sphere:
+                            size = Physics.OverlapSphereNonAlloc(colliderData.SphereCenter + position, // stugum e baxumy erb collider-y Sphere-a e =>
+                                colliderData.SphereRadius, _results);
+                            break;
+                        case (UnityEngine.Tilemaps.Tile.ColliderType)ColliderType.Capsule:
+                            var center =
+                                ((colliderData.CapsuleStart + position) + (colliderData.CapsuleEnd + position)) / 2f;
+                            var point1 = colliderData.CapsuleStart + position;
+                            var point2 = colliderData.CapsuleEnd + position;
+                            point1 = (float3)(rotation * (point1 - center)) + center;
+                            point2 = (float3)(rotation * (point2 - center)) + center;
+                            size = Physics.OverlapCapsuleNonAlloc(point1,
+                                point2,
+                                colliderData.CapsuleRadius, _results);
+                            break;
+                        case (UnityEngine.Tilemaps.Tile.ColliderType)ColliderType.Box:
+                            size = Physics.OverlapBoxNonAlloc(colliderData.BoxCenter + position,
+                                colliderData.BoxHalfExtents, _results, colliderData.BoxOrientation * rotation);
+                            break;
+                            throw new ArgumentOutOfRangeException();
                     }
-                    abilityCollision.Execute();
+
+                    if (size > 1)
+                    {
+                        foreach (var result in _results)
+                        {
+                            abilityCollision?.collisions?.Add(result);
+                        }
+                        abilityCollision.Execute();
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("Попытка выполнить действие на несуществующей сущности (CollisionAbility)");
                 }
             });
     }

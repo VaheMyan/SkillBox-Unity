@@ -33,6 +33,13 @@ public class CollisionAbility : MonoBehaviour, IConvertGameObjectToEntity, IAbil
 
     public void Execute()
     {
+        Debug.Log("Executing CollisionAbility");
+        if (collisions == null)
+        {
+            Debug.LogError("Collisions list is null in CollisionAbility");
+            return;
+        }
+
         foreach (var action in collisionActionsAbilities)
         {
             if (action is IAbilityTarget actionTarget)
@@ -43,6 +50,7 @@ public class CollisionAbility : MonoBehaviour, IConvertGameObjectToEntity, IAbil
                     if (c != null) actionTarget.Targets.Add(c.gameObject); // avelacnum enq Target-neri canki gameObject-neri vra
                 });
             }
+            Debug.Log("Executing action: " + action.GetType().Name);
             action.Execute();
         }
     }

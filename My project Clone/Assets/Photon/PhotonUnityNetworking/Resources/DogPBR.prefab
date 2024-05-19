@@ -6340,7 +6340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3208abf9371ca4747b5764f4074bfd72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryUIRoot: {fileID: 120291582713958628, guid: f17b2e7162cf93b4ab4a830840e2ee98, type: 3}
+  InventoryUIRoot: {fileID: 0}
   levelUpActions:
   - {fileID: 379559179}
   currentLevel: 1
@@ -6373,7 +6373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObservedComponentsFoldoutOpen: 1
   Group: 0
-  prefixField: -1
+  prefixField: 0
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 0

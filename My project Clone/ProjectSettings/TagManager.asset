@@ -8,6 +8,9 @@ TagManager:
   - Wall
   - Projectile
   - Bullet
+  - Item
+  - Panel
+  - TrapShrink
   layers:
   - Default
   - TransparentFX

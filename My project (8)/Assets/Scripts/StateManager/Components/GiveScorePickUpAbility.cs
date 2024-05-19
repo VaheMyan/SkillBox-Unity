@@ -15,7 +15,15 @@ public class GiveScorePickUpAbility : MonoBehaviour, IAbilityTarget, IConvertGam
         {
             var character = target.GetComponent<CharacterData>();
             if (character != null) character.Score(3);
-            _dsManager.DestroyEntity(_entity);
+
+            if (_dsManager.Exists(_entity))
+            {
+                _dsManager.DestroyEntity(_entity);
+            }
+            else
+            {
+                Debug.LogWarning("Попытка уничтожить несуществующую сущность");
+            }
         }
     }
 

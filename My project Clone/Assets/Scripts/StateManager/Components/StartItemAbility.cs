@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class StartItemAbility : MonoBehaviour, IAbilityTarget
 {
@@ -14,6 +15,6 @@ public class StartItemAbility : MonoBehaviour, IAbilityTarget
             if (character == null) return;
             character.Health += 5;
         }
-        Destroy(this.gameObject);
+        PhotonNetwork.Destroy(this.gameObject);
     }
 }

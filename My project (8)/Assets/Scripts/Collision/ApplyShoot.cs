@@ -31,7 +31,7 @@ public class ApplyShoot : MonoBehaviour, IAbilityTarget
     {
         if (startForward == true)
         {
-            transform.position += Vector3.back * Time.deltaTime * Speed;
+            this.transform.position += Vector3.forward * Time.deltaTime * Speed;
         }
 
         //Treeger();

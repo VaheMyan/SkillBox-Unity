@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using Photon.Pun;
 
 public class ShootAbility : MonoBehaviour, IAbility
 {
@@ -40,10 +41,8 @@ public class ShootAbility : MonoBehaviour, IAbility
 
         if (bullent != null)
         {
-            var p = transform.position;
-            var r = transform.rotation;
-            //Debug.Log(p + " ------ " + r);
-            Instantiate(bullent, new Vector3(p.x, p.y + 0.8f, p.z), r);
+            var p = this.transform.position;
+            PhotonNetwork.Instantiate(bullent.name, new Vector3(p.x, p.y + 0.8f, p.z), this.transform.rotation);
 
             effect.Play(); // fier effect Play
             //stats++;
