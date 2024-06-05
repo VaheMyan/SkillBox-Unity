@@ -17,7 +17,7 @@ public class RunAbility : MonoBehaviour, IAbility
         {
             Debug.Log("Hello!");
             var t = transform;
-            var newBullet = Instantiate(bullent, t.position, t.rotation);
+            Instantiate(bullent, t.position, t.rotation);
 
         }
         else

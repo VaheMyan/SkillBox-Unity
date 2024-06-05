@@ -5,7 +5,7 @@ using Unity.Entities;
 using Photon.Pun;
 using Object = UnityEngine.Object;
 
-public class GiveItemPickUpAbility : MonoBehaviour, IAbilityTarget, IConvertGameObjectToEntity, IItem
+public class GiveItemPickUpAbility : MonoBehaviour, IAbilityTarget, IItem
 {
     public GameObject _UIItem;
 
@@ -62,9 +62,9 @@ public class GiveItemPickUpAbility : MonoBehaviour, IAbilityTarget, IConvertGame
         }
     }
 
-    public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
-    {
-        _entity = entity;
-        _dsManager = dstManager;
-    }
+    //public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
+    //{
+    //    _entity = entity;
+    //    _dsManager = dstManager;
+    //}
 }

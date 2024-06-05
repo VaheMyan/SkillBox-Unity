@@ -6145,6 +6145,7 @@ GameObject:
   - component: {fileID: 8086372232532705161}
   - component: {fileID: 4448086628558019267}
   - component: {fileID: 6312875964473263415}
+  - component: {fileID: 6962992013661433781}
   m_Layer: 0
   m_Name: DogPBR
   m_TagString: Player
@@ -6238,11 +6239,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullent: {fileID: 7926046042617591771, guid: 19305d6877a52e645afce012fd7f3049, type: 3}
-  shootDelay: 0.5
+  shootDelay: 0.1
   stats: 0
   playerStats: {fileID: 0}
   downloadJSON: {fileID: 0}
   effect: {fileID: 1835841924}
+  _objectPool: {fileID: 0}
 --- !u!114 &379559163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6435,6 +6437,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversionMode: 1
+--- !u!114 &6962992013661433781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8422892626600285392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c07db7835c38247bfcbcb1e8cc17d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 7926046042617591771, guid: 19305d6877a52e645afce012fd7f3049, type: 3}
+  amountToPool: 50
 --- !u!1 &8422892626600285394
 GameObject:
   m_ObjectHideFlags: 0

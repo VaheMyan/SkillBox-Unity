@@ -10,13 +10,12 @@ public class DogAnimSystem : ComponentSystem
     private EntityQuery _query;
     protected override void OnCreate()
     {
-        _query = GetEntityQuery(ComponentType.ReadOnly<MoveAnimData>(), ComponentType.ReadOnly<Animator>(), ComponentType.ReadOnly<AttackAnimData>(),
-            ComponentType.ReadOnly<GetHitAnimData>(), ComponentType.ReadOnly<DieAnimData>(), ComponentType.ReadOnly<InputData>());
+        _query = GetEntityQuery(ComponentType.ReadOnly<Animator>(), ComponentType.ReadOnly<InputData>());
     }
 
     protected override void OnUpdate()
     {
-        Entities.With(_query).ForEach((Entity entity, ref InputData move, Animator animator, UserInputData inputData, CharacterHealth characterHealth, PhotonView photonView) =>
+        Entities.With(_query).ForEach((Entity entity, ref InputData move, Animator animator, UserInputData inputData, CharacterHealth characterHealth) =>
         {
             if (animator != null && inputData != null && characterHealth != null)
             {

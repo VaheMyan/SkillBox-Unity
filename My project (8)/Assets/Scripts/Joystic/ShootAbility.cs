@@ -7,20 +7,19 @@ public class ShootAbility : MonoBehaviour, IAbility
 {
     public GameObject bullent;
     public float shootDelay;
-
-    private float _shootTime = float.MinValue;
-
     public int stats;
     public PlayerStats playerStats;
     public DownloadJSON downloadJSON;
-
     public ParticleSystem effect;
 
+    private float _shootTime = float.MinValue;
     private CharacterData _characterData;
+    public ObjectPool _objectPool;
 
     private void Start()
     {
         _characterData = GetComponent<CharacterData>();
+        _objectPool = GetComponent<ObjectPool>();
         //stats = new PlayerStats();
         var jsonString = PlayerPrefs.GetString("Stats");
 
@@ -42,7 +41,9 @@ public class ShootAbility : MonoBehaviour, IAbility
         if (bullent != null)
         {
             var p = this.transform.position;
-            PhotonNetwork.Instantiate(bullent.name, new Vector3(p.x, p.y + 0.8f, p.z), this.transform.rotation);
+            //PhotonNetwork.Instantiate(bullent.name, new Vector3(p.x, p.y + 0.8f, p.z), this.transform.rotation);
+            _objectPool.InstantiateWithPool(new Vector3(p.x, p.y + 0.8f, p.z), Quaternion.identity);
+
 
             effect.Play(); // fier effect Play
             //stats++;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Entities;
 using System.Threading.Tasks;
+using Photon.Pun;
 
 public class CharacterHealth : MonoBehaviour, IConvertGameObjectToEntity
 {
@@ -67,8 +68,7 @@ public class CharacterHealth : MonoBehaviour, IConvertGameObjectToEntity
         {
             isDie = true;
             await Task.Delay(2500);
-            isDisable = true;
-            Destroy(this.gameObject);
+            PhotonNetwork.Destroy(this.gameObject);
             _dsManager.DestroyEntity(_entity);
             await Task.Delay(2000);
             Debug.Log("Restart");
@@ -77,7 +77,6 @@ public class CharacterHealth : MonoBehaviour, IConvertGameObjectToEntity
             if (networkManager.endDisconnected)
             {
                 networkManager.StartConected();
-                isDisable = true;
             }
         }
         else

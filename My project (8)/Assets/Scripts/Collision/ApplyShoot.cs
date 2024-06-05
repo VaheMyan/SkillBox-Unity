@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class ApplyShoot : MonoBehaviour, IAbilityTarget
 {
-    public bool startForward = false;
     public int Speed = 5;
     public List<GameObject> Targets { get; set; }
+
+    bool isStartDestroy = false;
 
     public void Execute()
     {
@@ -29,23 +30,24 @@ public class ApplyShoot : MonoBehaviour, IAbilityTarget
 
     private void Update()
     {
-        if (startForward == true)
+        if (this.gameObject.activeInHierarchy)
         {
             this.transform.position += Vector3.forward * Time.deltaTime * Speed;
+            DestroyBullet();
         }
 
         //Treeger();
 
     }
-    private void Start()
-    {
-        DestroyBullet();
-    }
-
     private async void DestroyBullet()
     {
-        await Task.Delay(2000);
-        Destroy(this.gameObject);
+        if (isStartDestroy == false)
+        {
+            isStartDestroy = true;
+            await Task.Delay(2000);
+            this.gameObject.SetActive(false);
+            isStartDestroy = false;
+        }
     }
 
 }

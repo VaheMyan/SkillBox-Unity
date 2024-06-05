@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using Photon.Pun;
 
 public class ShrinkAbility : MonoBehaviour, IAbility
 {
@@ -33,28 +32,31 @@ public class ShrinkAbility : MonoBehaviour, IAbility
     }
     private void Update()
     {
-        if (targetTransform != null)
-        {
-            distance = Vector3.Distance(transform.position, targetTransform.position);
-            if (distance <= 3.6f)
-            {
-                if (!isAnimating)
-                {
-                    StartFall();
-                    isAnimating = true;
-                }
-            }
-            else
-            {
-                isAnimating = false;
-            }
-        }
+
     }
 
     IEnumerator FindTargetTransform()
     {
         while (true)
         {
+            if (targetTransform != null)
+            {
+                distance = Vector3.Distance(transform.position, targetTransform.position);
+                if (distance <= 3.6f)
+                {
+                    if (!isAnimating)
+                    {
+                        StartFall();
+                        isAnimating = true;
+                    }
+                }
+                else
+                {
+                    isAnimating = false;
+                }
+            }
+
+
             players = GameObject.FindGameObjectsWithTag("Player");
             foreach (GameObject player in players)
             {

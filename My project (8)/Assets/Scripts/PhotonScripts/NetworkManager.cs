@@ -4,7 +4,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using Unity.Entities;
 
-public class NetworkManager : MonoBehaviourPunCallbacks
+public class NetworkManager : MonoBehaviourPunCallbacks, IConvertGameObjectToEntity
 {
     public GameObject PlayerSample;
     public GameObject TrapShrink;
@@ -12,8 +12,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public List<Transform> SpawnPoints;
 
     public bool endDisconnected = false;
+
     private Entity _entity;
     private EntityManager _dsManager;
+    private GameObjectConversionSystem _conversionSystem;
 
     void Start()
     {
@@ -56,46 +58,24 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         var id = PhotonNetwork.LocalPlayer.ActorNumber;
         Debug.Log("Joined Room with " + PhotonNetwork.CurrentRoom.PlayerCount + " players and ID is " + id);
 
-        var Player = PhotonNetwork.Instantiate(PlayerSample.name, SpawnPoints[0].position, Quaternion.identity);
-        string MyPlayerId = "Player" + PhotonNetwork.LocalPlayer.ActorNumber;
-        Player.name = MyPlayerId;
+        Vector3 spawnPosition = SpawnPoints[id % SpawnPoints.Count].position;
+        var Player = PhotonNetwork.Instantiate(PlayerSample.name, spawnPosition, Quaternion.identity, 0);
+        Player.name = "Player " + id;
 
         if (PhotonNetwork.CurrentRoom.PlayerCount > 1)
         {
             this.photonView.RPC("RPC_ChangePlayerName", RpcTarget.Others, (byte)PhotonNetwork.LocalPlayer.ActorNumber);
         }
 
-        //PhotonNetwork.Instantiate(TrapShrink.name, TrapShrink.transform.position, TrapShrink.transform.rotation);
-
-        //for (int i = 0; i < Items.Length; i++)
-        //{
-        //    PhotonNetwork.Instantiate(Items[i].name, Items[i].transform.position, Items[i].transform.rotation);
-        //}
-
-        if (photonView.IsMine)
+        if (PhotonNetwork.IsMasterClient)
         {
             PhotonNetwork.Instantiate(TrapShrink.name, TrapShrink.transform.position, TrapShrink.transform.rotation);
 
-            for (int i = 0; i < Items.Length; i++)
+            foreach (GameObject item in Items)
             {
-                PhotonNetwork.Instantiate(Items[i].name, Items[i].transform.position, Items[i].transform.rotation);
+                PhotonNetwork.Instantiate(item.name, item.transform.position, item.transform.rotation);
             }
         }
-
-        //_player = PhotonNetwork.LocalPlayer;
-        //PhotonNetwork.SetMasterClient(_player);
-
-        //if (id > (SpawnPoints.Count + 1))
-        //{
-        //    PhotonNetwork.Instantiate(PlayerSample.name, SpawnPoints[0].position, Quaternion.identity);
-
-        //    //Debug.LogError("No SPAWN POINT");
-        //}
-        //else
-        //{
-        //    PhotonNetwork.Instantiate(PlayerSample.name, SpawnPoints[id - 1].position, Quaternion.identity);
-        //    shrinkAbiliti.FindGameObjectWithTag("Player");
-        //}
     }
     public void SayHello()
     {
@@ -123,7 +103,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void RPC_ChangePlayerName(byte myActorNumber)
     {
         var otherPlayer = GameObject.Find("DogPBR(Clone)");
-        otherPlayer.name = "Player" + myActorNumber;
+        if (otherPlayer != null)
+        {
+            otherPlayer.name = "Player" + myActorNumber;
+        }
     }
     [PunRPC]
     public void DestroyItem(string itemName)
@@ -132,14 +115,24 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.Destroy(GameObject.Find(itemName));
 
-            _dsManager.DestroyEntity(GameObject.Find(itemName).GetComponent<Entity>());
+            DestroyTargetEntity(_conversionSystem, itemName);
 
             Debug.Log(itemName + " is destroyed");
         }
     }
 
-    public void Test()
+    private void DestroyTargetEntity(GameObjectConversionSystem conversionSystem, string itemName)
     {
-        PhotonNetwork.SetMasterClient(PhotonNetwork.LocalPlayer);
+        if (GameObject.Find(itemName) != null)
+        {
+            var targetEntity = conversionSystem.GetPrimaryEntity(GameObject.Find(itemName));
+            _dsManager.DestroyEntity(targetEntity);
+        }
+    }
+    public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
+    {
+        _dsManager = dstManager;
+        _entity = entity;
+        _conversionSystem = conversionSystem;
     }
 }

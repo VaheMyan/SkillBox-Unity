@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using Photon.Pun;
 
 public class ShrinkAbility : MonoBehaviour, IAbility
 {
