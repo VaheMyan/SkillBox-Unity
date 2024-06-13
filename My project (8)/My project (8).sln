@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-TestFramework", "Ze
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotonUnityNetworking.Utilities.PhotonPlayer.Editor", "PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj", "{825B580D-5E05-CFCA-11A0-B8F3BC70962C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMobileAds.Editor", "GoogleMobileAds.Editor.csproj", "{9C19959E-D004-9B58-E51F-C2FB4D721F96}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-ReflectionBaking-Editor", "Zenject-ReflectionBaking-Editor.csproj", "{C3A8897C-440E-7B13-7886-C2CB63C1E842}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-Editor", "Zenject-Editor.csproj", "{BB58BDB9-0118-34AC-159F-C20B892CD064}"
@@ -145,6 +147,10 @@ Global
 		{825B580D-5E05-CFCA-11A0-B8F3BC70962C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{825B580D-5E05-CFCA-11A0-B8F3BC70962C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{825B580D-5E05-CFCA-11A0-B8F3BC70962C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C19959E-D004-9B58-E51F-C2FB4D721F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C19959E-D004-9B58-E51F-C2FB4D721F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C19959E-D004-9B58-E51F-C2FB4D721F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C19959E-D004-9B58-E51F-C2FB4D721F96}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C3A8897C-440E-7B13-7886-C2CB63C1E842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C3A8897C-440E-7B13-7886-C2CB63C1E842}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3A8897C-440E-7B13-7886-C2CB63C1E842}.Release|Any CPU.ActiveCfg = Release|Any CPU
