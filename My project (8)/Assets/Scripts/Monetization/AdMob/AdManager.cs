@@ -28,10 +28,8 @@ public class AdManager : MonoBehaviour
     {
 #if UNITY_ANDROID
         string adUnitId = "ca-app-pub-5953810998940157/6652240811";
-#elif UNITY_IPHONE
-            string adUnitId = "";
 #else
-            string adUnitId = "unexpected_platform";
+        string adUnitId = "unexpected_platform";
 #endif
         if (_bannerView != null)
         {
@@ -80,10 +78,8 @@ public class AdManager : MonoBehaviour
     {
 #if UNITY_ANDROID
         string adUnitId = "ca-app-pub-5953810998940157/7449197609";
-#elif UNITY_IPHONE
-            string adUnitId = "";
 #else
-            string adUnitId = "unexpected_platform";
+        string adUnitId = "unexpected_platform";
 #endif
         Debug.Log("Creating interstitial view");
 
@@ -162,10 +158,8 @@ public class AdManager : MonoBehaviour
     {
 #if UNITY_ANDROID
         string adUnitId = "ca-app-pub-5953810998940157/5937924945";
-#elif UNITY_IPHONE
-            string adUnitId = "";
 #else
-            string adUnitId = "unexpected_platform";
+        string adUnitId = "unexpected_platform";
 #endif
         if (_rewardedAd != null)
         {

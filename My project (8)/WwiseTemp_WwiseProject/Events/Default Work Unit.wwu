@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0DF5EB75-97C9-4EE0-8B8C-A180BA264DAB}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{0DF5EB75-97C9-4EE0-8B8C-A180BA264DAB}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Emision" ID="{478F2395-B967-499D-847D-7A9856E5EF79}">
+					<ChildrenList>
+						<Action Name="" ID="{5297B2E1-B9CC-446E-9F14-F6CC70BBF3EE}" ShortID="912586713">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="J4UFZVA-video-game-spring" ID="{36A17D36-1FE8-4176-BED1-8DE88F97C1E9}" WorkUnitID="{FF6078EE-E975-4DFF-BA6C-78E2D0AF4F4C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
