@@ -1,0 +1,17 @@
+{
+	"name": "UnityEngine.Purchasing2",
+	"references": [
+    "UnityEngine.Purchasing"
+  ],
+  "optionalUnityReferences": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+
+}

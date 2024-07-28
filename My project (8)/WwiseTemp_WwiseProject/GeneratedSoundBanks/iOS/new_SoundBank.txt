@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	779278001	Death			\Default Work Unit\Death	
+	1419088003	Emision			\Default Work Unit\Emision	
+	3650723969	Background			\Default Work Unit\Background	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	126747497	sb_indreams(chosic_com)	D:\Unity\Program\GitHub\Games\SkillBox-Unity\My project (8)\WwiseTemp_WwiseProject\.cache\iOS\SFX\sb_indreams(chosic.com)_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\sb_indreams(chosic_com)		43838188
+	610694599	gta-v-death-sound-effect-102_mLvYdKR	D:\Unity\Program\GitHub\Games\SkillBox-Unity\My project (8)\WwiseTemp_WwiseProject\.cache\iOS\SFX\gta-v-death-sound-effect-102_mLvYdKR_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\gta-v-death-sound-effect-102_mLvYdKR		1368672
+	936261152	J4UFZVA-video-game-spring	D:\Unity\Program\GitHub\Games\SkillBox-Unity\My project (8)\WwiseTemp_WwiseProject\.cache\iOS\SFX\J4UFZVA-video-game-spring_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\J4UFZVA-video-game-spring		198240
+

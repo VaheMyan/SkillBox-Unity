@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="WwiseTemp_WwiseProject" GUID="{CEB258CE-AF91-4CB8-88D4-A0EFDE87DFEB}" Generator="2023.1.4.8496"/>
+	<CacheRoot>../../../../../My project (8)/WwiseTemp_WwiseProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Android" GUID="{0303BC43-AF81-4B3B-A32E-9A87A86E5801}" BasePlatform="Android" BasePlatformGUID="{A2D401DE-B8B6-4FEB-8142-137C34D507CA}" Path="../../../../../My project (8)/WwiseTemp_WwiseProject/GeneratedSoundBanks/Android"/>
+		<Platform Name="iOS" GUID="{0170DE49-41F0-455A-963E-251384F2410C}" BasePlatform="iOS" BasePlatformGUID="{ECE03DB4-F948-462D-B2BB-A9173012B1F8}" Path="../../../../../My project (8)/WwiseTemp_WwiseProject/GeneratedSoundBanks/iOS"/>
+		<Platform Name="Mac" GUID="{C4A159C3-AF6F-481B-BD9C-D4BC9FB6BD07}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../../My project (8)/WwiseTemp_WwiseProject/GeneratedSoundBanks/Mac"/>
+		<Platform Name="Windows" GUID="{D8D7CE36-0F16-4DCF-9FE2-5D9AD1445B04}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../../My project (8)/WwiseTemp_WwiseProject/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{1E5032EC-1E8E-4920-B10A-6364A8F63BD4}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{BE699C94-49D8-333E-71C1-EA65459F9329}</FileHash>
+</ProjectInfo>

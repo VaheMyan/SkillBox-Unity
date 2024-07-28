@@ -1,0 +1,6 @@
+org.gradle.jvmargs=-Xmx4608m -Dfile.encoding=UTF-8
+org.gradle.parallel=true
+android.useAndroidX=true
+android.enableJetifier=true
+unityStreamingAssets=true
+appAuthRedirectScheme=myredirectscheme

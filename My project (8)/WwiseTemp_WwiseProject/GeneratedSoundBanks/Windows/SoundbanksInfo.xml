@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="4072029455" Type="User" Language="SFX" Hash="{3D2B9A23-E46E-C003-89FF-C3DB02C34BBA}">
+			<ShortName>new_SoundBank</ShortName>
+			<Path>new_SoundBank.bnk</Path>
+			<Media>
+				<File Id="126747497" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sb_indreams(chosic.com).wav</ShortName>
+					<CachePath>SFX/sb_indreams(chosic.com)_818F3B66.wem</CachePath>
+				</File>
+				<File Id="610694599" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>gta-v-death-sound-effect-102_mLvYdKR.wav</ShortName>
+					<CachePath>SFX/gta-v-death-sound-effect-102_mLvYdKR_818F3B66.wem</CachePath>
+				</File>
+				<File Id="936261152" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>J4UFZVA-video-game-spring.wav</ShortName>
+					<CachePath>SFX/J4UFZVA-video-game-spring_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3650723969" Name="Background" DurationType="OneShot" DurationMin="248.51526" DurationMax="248.51526">
+					<MediaRefs>
+						<MediaRef Id="126747497"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="779278001" Name="Death" DurationType="OneShot" DurationMin="7.7583675" DurationMax="7.7583675">
+					<MediaRefs>
+						<MediaRef Id="610694599"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1419088003" Name="Emision" DurationType="OneShot" DurationMin="1.1232653" DurationMax="1.1232653">
+					<MediaRefs>
+						<MediaRef Id="936261152"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{DBDCBF96-8D18-E324-D18F-68F1ED50B025}</FileHash>
+</SoundBanksInfo>

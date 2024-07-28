@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FF6078EE-E975-4DFF-BA6C-78E2D0AF4F4C}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{FF6078EE-E975-4DFF-BA6C-78E2D0AF4F4C}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="J4UFZVA-video-game-spring" ID="{36A17D36-1FE8-4176-BED1-8DE88F97C1E9}" ShortID="69855705">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36BCDBAD-C672-4CE3-A5FC-3F6C12921B6C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E32EBB6-8326-498E-AF75-43063138CF2D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="J4UFZVA-video-game-spring" ID="{F89C3F3B-4552-4E53-8C5E-9CA2EDEC7F94}">
+							<Language>SFX</Language>
+							<AudioFile>J4UFZVA-video-game-spring.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="936261152"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="J4UFZVA-video-game-spring" ID="{F89C3F3B-4552-4E53-8C5E-9CA2EDEC7F94}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="gta-v-death-sound-effect-102_mLvYdKR" ID="{7E205432-EB1C-4F45-BC6E-4ABCCE1018FE}" ShortID="347727096">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36BCDBAD-C672-4CE3-A5FC-3F6C12921B6C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E32EBB6-8326-498E-AF75-43063138CF2D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="gta-v-death-sound-effect-102_mLvYdKR" ID="{9E2ADC4C-0932-4963-8ACF-BF10B14F49B6}">
+							<Language>SFX</Language>
+							<AudioFile>gta-v-death-sound-effect-102_mLvYdKR.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="610694599"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="gta-v-death-sound-effect-102_mLvYdKR" ID="{9E2ADC4C-0932-4963-8ACF-BF10B14F49B6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="sb_indreams(chosic_com)" ID="{CF0138BD-467E-4271-8EFD-F8EB9FD92A48}" ShortID="827796935">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{36BCDBAD-C672-4CE3-A5FC-3F6C12921B6C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0E32EBB6-8326-498E-AF75-43063138CF2D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="sb_indreams(chosic_com)" ID="{2595AA34-5E02-4C9B-978E-12FAE4CE68A0}">
+							<Language>SFX</Language>
+							<AudioFile>sb_indreams(chosic.com).wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="126747497"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="sb_indreams(chosic_com)" ID="{2595AA34-5E02-4C9B-978E-12FAE4CE68A0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
