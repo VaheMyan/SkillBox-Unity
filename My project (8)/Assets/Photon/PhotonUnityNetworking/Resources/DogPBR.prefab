@@ -6489,7 +6489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeDelay: 0
   dissolveMaterial: {fileID: 2100000, guid: 05a9825fbb918154ab49d2dc6771d920, type: 2}
-  dissolve: 0.01
+  dissolve: 0.02
   _changeMaterialInput: 0
   isDissolved: 0
 --- !u!114 &379559177
